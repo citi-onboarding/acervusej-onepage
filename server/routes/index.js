@@ -3,7 +3,7 @@ const keystone = require('keystone');
 const cors = require('cors');
 
 const postController = require('../controllers/postController.js');
-const aboutUsController = require('../controllers/aboutUsController');
+const aboutUsController = require('../controllers/AboutUsController');
 
 module.exports = (app) => {
     app.use(cors());
