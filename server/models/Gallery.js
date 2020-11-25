@@ -24,7 +24,7 @@ Gallery.add({
 
     description: {
         type: Types.Textarea,
-        requeired: true;
+        requeired: true,
         initial: true,
         label: 'Descrição',
         note: 'Descrição sobreo post'
