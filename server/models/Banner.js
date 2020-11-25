@@ -18,13 +18,13 @@ Banner.add({
   },
   image: {
     type: Types.CloudinaryImage,
-    require: true,
+    required: true,
     initial: true,
     label: 'Imagem',
   },
   description: {
     type: Types.Textarea,
-    require: true,
+    required: true,
     initial: true,
     label: 'Descrição',
     note: 'Descrição sobre conteúdo',
