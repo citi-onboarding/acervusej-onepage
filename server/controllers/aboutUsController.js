@@ -3,7 +3,7 @@ const keystone = require('keystone');
 const aboutUs = keystone.list('AboutUs');
 
 module.exports = {
-    getAboutUs(req, res) {
+    getAboutUsController(req, res) {
         aboutUs.model.find((err, items) => {
             if (err) {
                 console.log(err);
