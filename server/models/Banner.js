@@ -13,7 +13,6 @@ Banner.add({
     type: Types.Text,
     required: true,
     initial: true,
-    index: true,
     label: 'Titulo',
     note: 'Título da imagem',
   },
