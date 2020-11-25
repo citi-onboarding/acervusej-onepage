@@ -3,6 +3,7 @@ const keystone = require('keystone');
 const cors = require('cors');
 
 const postController = require('../controllers/postController.js');
+const postService = require('../controllers/postServices.js');
 
 module.exports = (app) => {
   app.use(cors());
@@ -12,6 +13,7 @@ module.exports = (app) => {
   });
 
   app.get('/api/posts', postController.getPostController);
+  app.get('/api/services',postService.getServiceController);
 
   app.get('*', (req, res) => {
 		res.redirect('/');
