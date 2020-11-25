@@ -109,7 +109,7 @@
   
 <ul>
     <li>Victor Silva - <i>Project Manager</i> - <a href="https://github.com victormarques-ia">victormarques-ia</a></li>
-    <li>Júlio Bem - <i>Developer</i> - <a href="https://github.com/PhieSouza">PhieSouza</a></li>
+    <li>Júlio Bem - <i>Developer</i> - <a href="https://github.com/JulioBem">JulioBem</a></li>
     <li>Sofia Melo - <i>Developer</i> - <a href="https://github.com/Sofiamdl">Sofiamdl</a></li>
     <li>Igor Phillipe - <i>Developer</i> - <a href="https://github.com/IgrPhillipe">IgrPhillipe</a></li>
 </ul>
