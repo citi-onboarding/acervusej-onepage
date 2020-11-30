@@ -2,12 +2,12 @@ const keystone = require('keystone');
 
 const { Types } = keystone.Field;
 
-const aboutUs = new keystone.List('AboutUs', {
+const AboutUs = new keystone.List('AboutUs', {
     map: { name: 'key' },
     label: 'Sobre nós',
 });
 
-aboutUs.add({
+AboutUs.add({
     key: {
         type: Types.Text,
         initial: false,
@@ -49,4 +49,4 @@ aboutUs.add({
 
 });
 
-aboutUs.register();
+AboutUs.register();
