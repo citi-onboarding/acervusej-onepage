@@ -40,6 +40,10 @@ h1, h2{
     font: 700 2.4rem TwCenMTBold, sans-serif;
 }
 
+.container {
+    width: 90vw;
+    max-width: 1440px;
+}
 
 @font-face{
     font-family: TwCenMT;
@@ -56,8 +60,4 @@ h1, h2{
         font-size: 62.5%;
     }
 
-    .container {
-    width: 90vw;
-    max-width: 1440px;
-    }
 }
