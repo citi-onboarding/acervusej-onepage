@@ -1,0 +1,63 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
+:root {
+    --color-background: #FFFFFF;
+    --color-primary:#E5E5E5;
+    --color-footer:#ABABAB;
+    --color-contact-background:#C4C4C4;
+
+    font-size: 60%;
+    color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100vh;
+}
+
+body {
+    background: var(--color-background);
+}
+
+body,
+input,
+button,
+textarea {
+    font: 1.6rem TwCenMT;
+    font-weight: normal;
+}
+
+h1, h2{
+    font: 700 2.4rem TwCenMTBold, sans-serif;
+}
+
+
+@font-face{
+    font-family: TwCenMT;
+    src: url('./assets/tw-cen-mt-6.ttf');
+}
+
+@font-face{
+    font-family: TwCenMTBold;
+    src: url('./assets/tw-cen-mt-bold.ttf');
+}
+
+@media (min-width: 768px) {
+    :root {
+        font-size: 62.5%;
+    }
+
+    .container {
+    width: 90vw;
+    max-width: 1440px;
+    }
+}

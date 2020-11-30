@@ -1,6 +1,6 @@
 import {
   PostList,
-} from './components';
+} from './components/index';
 
 function App() {
   return (

@@ -17,6 +17,8 @@ function PostList() {
 
   return (
     <div className="post-list">
+      <h2>Museuologia</h2>
+      <p>teste</p>
       {posts?.map(({ _id, name, image }) => (
         <div key={_id} className="post-card">
           <img src={image[0]?.url} alt="Post de Exemplo"/>
