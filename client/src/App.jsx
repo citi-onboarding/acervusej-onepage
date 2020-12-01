@@ -1,10 +1,13 @@
 import {
   PostList,
+  Header,
 } from './components/index';
 
 function App() {
   return (
-    <PostList />
+    <>
+      <Header />
+    </>
   );
 }
 
