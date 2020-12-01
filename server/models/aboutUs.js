@@ -29,6 +29,12 @@ AboutUs.add({
         },
     },
     aboutCourse: {
+        key: {
+            type: Types.Text,
+            initial: false,
+            default: 'A Museologia'
+        },
+
         description: {
             type: Types.Textarea,
             required: true,
