@@ -81,7 +81,7 @@ header > div > nav > a {
 #menuButton {
     margin: 8rem 1.6rem;
     cursor: pointer;
-    left: 80%;
+    right: 1%;
     position: fixed;
 }
 
@@ -98,7 +98,7 @@ header > div > nav > a {
 #menuClose {
     margin: 8rem 1.6rem;
     cursor: pointer;
-    left: 80%;
+    right: 1%;
     display: none;
     position: fixed;
 }
