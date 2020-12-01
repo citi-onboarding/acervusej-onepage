@@ -5,6 +5,11 @@ header {
     position: fixed;
 }
 
+#headerContainer {
+    height: 100%;
+    margin: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -16,15 +21,15 @@ nav {
     width: 5.5rem;
 }
 
-header > nav > a {
+header > div > nav > a {
     margin: .7rem 2rem;
 }
 
 #navItems {
     display: flex;
     background-color: #202020;
-    width: 100%;
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
     justify-content: center;
     flex-direction: column;
 }
@@ -59,7 +64,8 @@ header > nav > a {
     border: none;
     cursor: pointer;
     position: fixed;
-    left: 30%;
+    right: 25%;
+    left: 25%;
     top: 90%;
 }
 
@@ -75,7 +81,8 @@ header > nav > a {
 #menuButton {
     margin: 8rem 1.6rem;
     cursor: pointer;
-    left: 70%;
+    left: 80%;
+    position: fixed;
 }
 
 
@@ -91,8 +98,9 @@ header > nav > a {
 #menuClose {
     margin: 8rem 1.6rem;
     cursor: pointer;
-    left: 70%;
+    left: 80%;
     display: none;
+    position: fixed;
 }
 
 #menuClose span {
@@ -135,6 +143,13 @@ header > nav > a {
         height: 11rem;
     }
 
+    #headerContainer {
+        align-items: flex-end;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+    }
+
     #menuButton {
         display: none;
     }
@@ -170,7 +185,7 @@ header > nav > a {
         list-style: none;
         display: flex;
         flex-direction: row;
-        margin-right: 8vw;
+        margin-right: 2vw;
     }
     
     #navItems1 ul li {
@@ -191,7 +206,7 @@ header > nav > a {
 
     #navLogo {
         width: 10rem;
-        margin-left: 10vw;
+        margin-left: 2vw;
     }
 
     header > nav > a {

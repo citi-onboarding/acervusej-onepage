@@ -1,5 +1,4 @@
 import {
-  PostList,
   Header,
 } from './components/index';
 

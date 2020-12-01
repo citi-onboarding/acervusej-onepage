@@ -23,32 +23,34 @@ function Header() {
 
   return (
     <header>
-        <nav>
-            <a href=""><img src={logo} alt="" id="navLogo" /></a>
-            <div id="menuButton" onClick={toggleMenu}>
-                <span></span>
-                <span></span>
-                <span></span>
+        <div className="container" id="headerContainer">
+            <nav>
+                <a href=""><img src={logo} alt="" id="navLogo" /></a>
+                <div id="menuButton" onClick={toggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="menuClose" onClick={closeMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            {isMenuVisible ? <NavItems /> : null}
+            <div id="navItems1">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">A Acervus</a></li>
+                    {/* <li><a href="">Missão e Visão</a></li> */}
+                    <li><a href="">Serviços</a></li>
+                    <li><a href="">Galeria</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+                <button id="navContact">
+                    <a href="">Fale conosco</a>
+                </button>
             </div>
-            <div id="menuClose" onClick={closeMenu}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-        {isMenuVisible ? <NavItems /> : null}
-        <div id="navItems1">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">A Acervus</a></li>
-                {/* <li><a href="">Missão e Visão</a></li> */}
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Galeria</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-            <button id="navContact">
-                <a href="">Fale conosco</a>
-            </button>
         </div>
     </header>
   );
