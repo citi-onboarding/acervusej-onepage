@@ -28,6 +28,21 @@ AboutUs.add({
             label: 'Imagem sobre nós'
         },
     },
+    aboutCourse: {
+        description: {
+            type: Types.Textarea,
+            required: true,
+            initial: true,
+            label: 'Museologia',
+            note: 'Fale sobre a museologia'
+        },
+        image: {
+            type: Types.CloudinaryImage,
+            required: true,
+            initial: true,
+            label: 'Imagem sobre a museologia'
+        },
+    },
     mission: {
         description: {
             type: Types.Textarea,
@@ -43,7 +58,7 @@ AboutUs.add({
             required: true,
             initial: true,
             label: 'Visão',
-            note: 'Fale sobre a missão da empresa'
+            note: 'Fale sobre a visão da empresa'
         },
     },
 
