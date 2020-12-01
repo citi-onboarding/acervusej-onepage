@@ -1,31 +1,65 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+//import AboutUsPost from './AboutUsPost/AboutUsPost';
 
 function AboutUs() {
-    const [AboutUs, setAboutUs] = useState([]);
+    const [aboutUs, setAboutUs] = useState({
+        aboutCompany: {
+          description: '',
+          image: {
+            secure_url: '',
+          },
+        },
+
+        key: '',
+        mission: {
+          description: ''
+        },
+        vision: {
+          description: ''
+        },
+        _id: ''
+      },
+      
+      );
+
 
     const loadAboutUs = async () => {
         const res = await axios.get('http://localhost:3001/api/about-us');
-        setAboutUs(res.data);
+        setAboutUs({
+            aboutCompany: {
+              description: res.data[0].aboutCompany.description,
+              image: {
+                secure_url: res.data[0].aboutCompany.image.secure_url,
+                },
+            },
+
+           key: res.data[0].key,
+           mission: {
+             description: res.data[0].mission.description,
+           },
+           vision: {
+             description: res.data[0].vision.description,
+           },
+           _id: res.data[0]._id
+          })
     };
 
     useEffect(() => {
         loadAboutUs();
     }, []);
 
-    console.log(AboutUs[0]?.vision?.description);
-
-    return (
-        <div className="aboutUs">
-            <h2>Foi!, rota about-us funcionando</h2>
-            {AboutUs?.map(({_id, vision, mission}) => (
-                <div key={_id} className="aboutus">
-                    <p>{vision?.description}</p>
-                    <p>"{mission[0]?.description}"</p>
+        return (
+             <div className="aboutUs">
+                <div className="container">
+                    <div className="post">
+                        <h3>{aboutUs.key}</h3>
+                        <img src={aboutUs.aboutCompany.image.secure_url} alt="Sobre nós"/>
+                        <p>{aboutUs.aboutCompany.description}</p>
+                    </div>
                 </div>
-            ))}
-        </div>
-    );
+             </div>
+        );
 }
 
 export default AboutUs;
