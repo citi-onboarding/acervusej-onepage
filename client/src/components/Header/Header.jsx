@@ -8,17 +8,8 @@ function Header() {
     const [isMenuVisible, setMenuVisible] = useState(false);
 
     function toggleMenu() {
-        setMenuVisible(true);
-        document.querySelector('#menuButton').style.display = 'none';
-        document.querySelector('#menuClose').style.display = 'block';
+        setMenuVisible(!isMenuVisible);
         console.log('Open')
-    }
-
-    function closeMenu() {
-        setMenuVisible(false);
-        document.querySelector('#menuClose').style.display = 'none';
-        document.querySelector('#menuButton').style.display = 'block';
-        console.log('Close')
     }
 
   return (
@@ -26,16 +17,16 @@ function Header() {
         <div className="container" id="headerContainer">
             <nav>
                 <a href=""><img src={logo} alt="" id="navLogo" /></a>
-                <div id="menuButton" onClick={toggleMenu}>
+                <div className={isMenuVisible ? 'menuClose' : 'menuButton'} onClick={toggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <div id="menuClose" onClick={closeMenu}>
+{/*                 <div id="menuClose" onClick={closeMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </div> */}
             </nav>
             {isMenuVisible ? <NavItems /> : null}
             <div id="navItems1">
