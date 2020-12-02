@@ -1,9 +1,9 @@
 import React from 'react';
-import './AboutUsPost.css'
+import './AboutUsPostCourse.css'
 
-function AboutUsPost({ props }) {
+function AboutUsPostCourse({ props }) {
     return (
-        <div className="aboutUsPost">
+        <div className="aboutUsPostCourse">
             <div className="aboutUsPostImage">
                 <img src={props.image.secure_url} alt="Sobre nós" />
             </div>
@@ -11,8 +11,9 @@ function AboutUsPost({ props }) {
                 <h3>{props.label}</h3>
                 <p>{props.description}</p>
             </div>
+
         </div>
     );
 }
 
-export default AboutUsPost;
+export default AboutUsPostCourse;

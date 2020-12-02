@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AboutUs.css'
 
-import AboutUsPost from './AboutUsPost/AboutUsPost';
-import Modal from './Mission-Vision/Modal/Modal'
+import AboutUsPostCompany from './AboutUsPost/AboutUsPostCompany';
+import AboutUsPostCourse from './AboutUsPost/AboutUsPostCourse';
+import Modal from './Mission-Values/Modal/Modal'
 
 function AboutUs() {
     const [aboutUs, setAboutUs] = useState({
@@ -70,11 +71,12 @@ function AboutUs() {
                 <div className="title" id="First">
                     <h1>A Acervus</h1>
                 </div>
-                <AboutUsPost props={aboutUs.aboutCompany} />
-                <div className="title">
+                <AboutUsPostCompany props={aboutUs.aboutCompany} />
+                
+                <div className="title" id="Second" >
                     <h1>Museologia</h1>
                 </div>
-                <AboutUsPost props={aboutUs.aboutCourse} />
+                    <AboutUsPostCourse props={aboutUs.aboutCourse}/>                
                 <Modal props={aboutUs} />      
             </div>
         </div>
