@@ -1,7 +1,7 @@
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
 
-button.slick-arrow {
+.mainBanner > div > button.slick-arrow {
     display: none !important;
 }
 
@@ -11,44 +11,36 @@ section.mainBanner {
     width: 100vw;
 }
 
-.slick-list, .slick-slider {
+.mainBanner > div > .slick-list, .mainBanner > .slick-slider {
     height: 100%;
 }
 
-.slick-list, .slick-track {
-    touch-action: none !important;
-}
-
-
-ul.slick-dots {
+.mainBanner > div > ul.slick-dots {
     bottom: 5%;
 }
 
-.slick-slide img {
+.mainBanner > .slick-slider > .slick-list > .slick-track > .slick-slide > div > .banner-card > img {
     height: 100vh;
     display: block;
     width: 100vw;
 }
 
-.slick-dots li button {
+.mainBanner > .slick-slider > .slick-dots li button {
     transform: scale(2.5);
 }
 
 @media screen and (min-width: 769px) {
-    button.slick-arrow.slick-next {
+    .mainBanner > div > button.slick-arrow.slick-next {
         right: 10%;
         display: block !important;
         transform: scale(2);
     }
     
-    button.slick-arrow.slick-prev {
+    .mainBanner > div > button.slick-arrow.slick-prev {
         display: block !important;
         transform: scale(2);
         left: 10%;
         z-index: 2;
     }
 
-/*     .slick-dots li button {
-        transform: scale(2);
-    } */
 }
