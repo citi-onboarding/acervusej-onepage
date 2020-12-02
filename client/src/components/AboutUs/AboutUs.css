@@ -5,8 +5,27 @@
     align-items: center;
 }
 
-#contentAsboutUs {
+#contentAboutUs {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#contentAboutUs .title {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+#contentAboutUs #First {
+    margin-top: 8rem;
+}
+
+#contentAboutUs .title h1 {
+    font-size: 3rem;
+}
+
+@media (min-width: 1024px) {
+    #contentAboutUs .title {
+    }
 }

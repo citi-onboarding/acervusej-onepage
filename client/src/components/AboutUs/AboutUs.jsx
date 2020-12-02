@@ -3,7 +3,7 @@ import axios from 'axios';
 import './AboutUs.css'
 
 import AboutUsPost from './AboutUsPost/AboutUsPost';
-import Modal from './Mission-Vision/Modal'
+import Modal from './Mission-Vision/Modal/Modal'
 
 function AboutUs() {
     const [aboutUs, setAboutUs] = useState({
@@ -67,7 +67,13 @@ function AboutUs() {
     return (
         <div className="aboutUs">
             <div className="container" id="contentAboutUs">
+                <div className="title" id="First">
+                    <h1>A Acervus</h1>
+                </div>
                 <AboutUsPost props={aboutUs.aboutCompany} />
+                <div className="title">
+                    <h1>Museologia</h1>
+                </div>
                 <AboutUsPost props={aboutUs.aboutCourse} />
                 <Modal props={aboutUs} />      
             </div>

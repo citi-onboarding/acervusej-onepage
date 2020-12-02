@@ -1,5 +1,5 @@
 .aboutUsPost {
-    margin: 6rem 0;
+    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,8 +7,22 @@
     text-align: justify;
 }
 
+.aboutUsPostText h3 {
+    display: none;
+}
+
 img {
     margin: 3rem 0;
     padding: 0;
     width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .aboutUsPost {
+        flex-direction: row;
+    }
+    .aboutUsPostText {
+        display: block;
+    }
+
 }

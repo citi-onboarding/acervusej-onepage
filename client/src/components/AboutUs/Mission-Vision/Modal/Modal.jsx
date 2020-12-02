@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import MissionVision from './Mission-Vision'
+import MissionVision from '../Mission-Vision'
 import './Modal.css'
 
-import quotationMarks from '../../../assets/format_quote_end.svg'
+import quotationMarks from '../../../../assets/format_quote_end.svg'
 
 function Modal({props}) {
     const [change, setChange] = useState(false);
