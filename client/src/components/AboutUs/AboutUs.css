@@ -1,5 +1,12 @@
 .aboutUs {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentAsboutUs {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
