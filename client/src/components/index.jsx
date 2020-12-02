@@ -1,4 +1,4 @@
-//export { default as PostList } from './PostList/PostList';
+export { default as PostList } from './PostList/PostList';
 export { default as AboutUs } from './AboutUs/AboutUs';
 /*export { default as Banner } from './Banner/Banner';
 export { default as Contact } from './Contact/Contact';
