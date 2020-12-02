@@ -8,12 +8,13 @@ const AboutUs = new keystone.List('AboutUs', {
 });
 
 AboutUs.add({
-    key: {
-        type: Types.Text,
-        initial: false,
-        default: 'Sobre nós'
-    },
     aboutCompany: {
+        key: {
+            type: Types.Text,
+            initial: false,
+            default: 'Sobre nós'
+        },
+        
         description: {
             type: Types.Textarea,
             required: true,
@@ -21,6 +22,7 @@ AboutUs.add({
             label: 'Sobre nós',
             note: 'Fale sobre a empresa'
         },
+
         image: {
             type: Types.CloudinaryImage,
             required: true,
