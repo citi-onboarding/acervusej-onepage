@@ -3,6 +3,7 @@ header {
     height: 10%;
     background-color: #fff;
     position: fixed;
+    z-index: 99;
 }
 
 #headerContainer {

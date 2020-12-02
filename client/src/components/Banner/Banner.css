@@ -1,0 +1,31 @@
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+button.slick-arrow {
+    display: none!important;
+}
+
+section.mainBanner {
+    position: relative;
+    top: 10vh;
+    height: 90vh;
+    width: 100vw;
+}
+
+.slick-list, .slick-slider {
+    height: 100%;
+}
+
+ul.slick-dots {
+    bottom: 5%;
+}
+
+.slick-slide img {
+    height: 100vh;
+    display: block;
+    width: 100vw;
+}
+
+.slick-dots li button {
+    transform: scale(2.5);
+}
