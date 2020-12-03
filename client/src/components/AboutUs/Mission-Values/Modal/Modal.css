@@ -17,7 +17,7 @@
     font: TwCenMT;
 }
 
-.buttons button {
+.mission-button {
     width: 6rem;
     height: 3rem;
     cursor: pointer;
@@ -31,17 +31,27 @@
     justify-content: space-evenly;
 }
 
+.values-button {
+    width: 6rem;
+    height: 3rem;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: none;
+    color: #ababab;
+    justify-content: space-evenly;
+}
+
 .modal {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.modal img {
-    width: 1rem;
-    margin: 0;
 }
 
 

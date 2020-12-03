@@ -38,7 +38,7 @@ function AboutUs() {
         const res = await axios.get('http://localhost:3001/api/about-us');
         setAboutUs({
             aboutCompany: {
-                label: res.data[0].aboutCompany.key,
+                label: res.data[0].key,
                 description: res.data[0].aboutCompany.description,
                 image: {
                     secure_url: res.data[0].aboutCompany.image.secure_url,
@@ -71,12 +71,12 @@ function AboutUs() {
                 <div className="title" id="First">
                     <h1>A Acervus</h1>
                 </div>
-                <AboutUsPostCompany props={aboutUs.aboutCompany} />
+                <AboutUsPostCompany props={aboutUs} />
                 
                 <div className="title" id="Second" >
                     <h1>Museologia</h1>
                 </div>
-                    <AboutUsPostCourse props={aboutUs.aboutCourse}/>                
+                    <AboutUsPostCourse props={aboutUs}/>                
                 <Modal props={aboutUs} />      
             </div>
         </div>

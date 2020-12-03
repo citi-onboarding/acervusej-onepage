@@ -1,0 +1,36 @@
+.value {
+    width: 7rem;
+    height: 7rem;
+    margin: 3rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.value img {
+    width: 7rem;
+}
+
+@media (min-width: 520px) {
+    .value {
+        width: 10rem;
+        height: 10rem;
+        margin: 4rem 3rem;
+    }
+    .value img {
+        width: 10rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .value {
+        width: 15rem;
+        height: 15rem;
+        margin: 8rem 6rem;
+    }
+
+    .value img {
+        width: 15rem;
+    }
+}

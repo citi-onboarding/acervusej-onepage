@@ -5,11 +5,11 @@ function AboutUsPostCourse({ props }) {
     return (
         <div className="aboutUsPostCourse">
             <div className="aboutUsPostImage">
-                <img src={props.image.secure_url} alt="Sobre nós" />
+                <img src={props.aboutCourse.image.secure_url} alt="Sobre nós" />
             </div>
             <div className="aboutUsPostText">
-                <h3>{props.label}</h3>
-                <p>{props.description}</p>
+                <h3>{props.aboutCourse.label}</h3>
+                <p>{props.aboutCourse.description}</p>
             </div>
 
         </div>

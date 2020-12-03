@@ -8,13 +8,12 @@ const AboutUs = new keystone.List('AboutUs', {
 });
 
 AboutUs.add({
+    key: {
+        type: Types.Text,
+        initial: false,
+        default: 'A Acervus'
+    },
     aboutCompany: {
-        key: {
-            type: Types.Text,
-            initial: false,
-            default: 'Sobre nós'
-        },
-        
         description: {
             type: Types.Textarea,
             required: true,
@@ -34,6 +33,7 @@ AboutUs.add({
         key: {
             type: Types.Text,
             initial: false,
+            label: 'Sobre o curso',
             default: 'A Museologia'
         },
 
@@ -60,15 +60,15 @@ AboutUs.add({
             note: 'Fale sobre a missão da empresa'
         },
     },
-    vision: {
-        description: {
-            type: Types.Textarea,
+    values: {
+        file: {
+            type: Types.CloudinaryImages,
             required: true,
             initial: true,
-            label: 'Visão',
-            note: 'Fale sobre a visão da empresa'
+            label: 'Valores',
+            note: 'Insira os valores da empresa'
         },
-    },
+        },
 
 });
 

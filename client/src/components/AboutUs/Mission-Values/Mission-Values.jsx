@@ -1,6 +1,15 @@
 import React from 'react';
+import Values from './Values'
 import './Mission-Values.css';
-import quotationMarks from '../../../assets/format_quote_end.svg'
+
+import quotationMarks from '../../../assets/format_quote_end.svg';
+
+import one from '../../../assets/01.svg';
+import two from '../../../assets/02.svg';
+import three from '../../../assets/03.svg';
+import four from '../../../assets/04.svg';
+import five from '../../../assets/05.svg';
+import six from '../../../assets/06.svg';
 
 
 function MissionValues({ props }) {
@@ -21,7 +30,12 @@ function MissionValues({ props }) {
             </div>
 
             <div className="values">
-                <p>{props.vision.description}</p>
+                <Values props={one} />
+                <Values props={two} />
+                <Values props={three} />
+                <Values props={four} />
+                <Values props={five} />
+                <Values props={six} />
             </div>
         </>
     );

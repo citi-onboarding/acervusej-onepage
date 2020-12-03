@@ -7,11 +7,12 @@
     text-align: justify;
 }
 
+
 .aboutUsPostText h3 {
     display: none;
 }
 
-img {
+.aboutUsPostImage img {
     margin: 3rem 0;
     padding: 0;
     width: 100%;

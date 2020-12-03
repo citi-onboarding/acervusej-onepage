@@ -11,11 +11,19 @@ function Modal({props}) {
         setChange(false);
         document.querySelector('.mission').style.display = 'flex';
         document.querySelector('.values').style.display = 'none';
+        document.querySelector('.values-button').style.borderBottom = 'none';
+        document.querySelector('.values-button').style.color = '#ababab';
+        document.querySelector('.mission-button').style.borderBottom = '0.25rem solid #000000';
+        document.querySelector('.mission-button').style.color = '#000000';
     }
     function toggleShowValuesText() {
         setChange(true);
         document.querySelector('.mission').style.display = 'none';
-        document.querySelector('.values').style.display = 'block';
+        document.querySelector('.values').style.display = 'flex';
+        document.querySelector('.values-button').style.borderBottom = '0.25rem solid #000000';
+        document.querySelector('.values-button').style.color = '#000000';
+        document.querySelector('.mission-button').style.borderBottom = 'none';
+        document.querySelector('.mission-button').style.color = '#ababab';
     }
 
     return (
