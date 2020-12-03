@@ -35,7 +35,9 @@ footer {
 @media screen and (min-width: 769px) {
     #smContainer {
         flex-direction: row;
-        margin-left: 13rem;
+        margin: auto;
+        width: 90vw;
+        max-width: 1440px;
     }
 
     .smLogo:nth-child(2), .smLogo:nth-child(3) {
