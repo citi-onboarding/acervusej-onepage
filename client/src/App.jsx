@@ -5,8 +5,6 @@ import {
 function App() {
   return (
     <>
-      <Header />
-      <div className="separate"></div>
       <OurServices/>
     </>
   );

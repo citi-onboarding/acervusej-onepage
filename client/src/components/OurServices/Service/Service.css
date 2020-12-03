@@ -1,37 +1,88 @@
 .card-service{
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 188px;
-    height: 360px;
+    box-shadow: 0px 1.5vw 1.5vw rgba(0, 0, 0, 0.25);
+    width: 50vw;
+    height: 98vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container-service{
-    width: 155px;
-    height: 250px;
-    margin-bottom: 50px;
+    width: 42vw;
+    height: 90vw;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
 }
 
 .title-service{
-    font-size: 16px;
+    font-size: 3.8vw;
+    width: 70%;
     text-align: center;
-    margin-top: 16px;
-    margin-bottom: 32px;
+    margin-top: 4vw;
+    margin-bottom: 8vw;
+    
 }
 
 .desc-service{
-    font-size:13px;
+    font-size:3.2vw;
     text-align: justify;
-    width:155px
+    width:100%
 }
 
 .image-service{
-    height: 132px;
+    width: 100%;
+    height: 32vw;
+}
+
+@media (min-width:500px) and (max-width: 768px){
+    .card-service{
+        width: 49vw;
+        height: 92vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container-service{
+        width: 41vw;
+        height: 84vw;
+    }
+}
+
+@media (min-width:769px) {
+    .card-service{
+        width: 737px;
+        height: 550px;
+        box-shadow: none;
+    }
+    
+    .container-service{
+        width: 100%;
+        height: 100%;
+    }
+
+    .image-service{
+        height: 395px;
+        width: 100%;
+    }
+    
+    .title-service{
+        width: 70%;
+        margin-bottom: 65px;
+        font-size: 27px;
+        height: 30px;
+        margin: 20px 0;
+    }
+    
+    .desc-service{
+        font-size:19px;
+        text-align: center;
+        width:60%;
+    }
+    
+    
 }
 

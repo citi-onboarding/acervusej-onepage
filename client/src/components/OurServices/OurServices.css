@@ -1,37 +1,46 @@
-/*.all-services > .slick-slider{
-    height:200px;
+.slick-next:before, .slick-prev:before{
+    color:transparent !important;
 }
-.all-services > .slick-slider>.slick-list{
-    height:800px;
-    display:flex;
+.slick-arrow.slick-next{
+    right: 0px !important;
+    width:95px !important;
+    height: 550px !important;
+}
+
+.slick-arrow.slick-prev{
+    left: 0px !important;
+    width:95px !important;
+    height: 550px !important;
+    z-index: 2;
+}
+
+.title-our-services{
+    display: flex;
     justify-content: center;
+    margin-bottom: 10vw;
+    font-size: 8.3vw;
 }
-.all-services > .slick-slider>.slick-list> .slick-track{
-    height:200px;
-
-}
-.all-services > .slick-slider{
-    height:200px;
-}
-*/
 .all-services > .slick-slider.center.slick-initialized{
-    height: 400px !important;
-}
-
-.all-services >.slick-slider.center.slick-initialized> .slick-list > .slick-track> .slick-slide{
-    margin-top: 20px
+    height: 120vw !important;
 }
 
 .all-services >.slick-slider.center.slick-initialized> .slick-list > .slick-track{
-    height: 400px !important;
-    width: 700vw !important;
+    height: 120vw !important;
+    display: flex;
+    justify-content: center;
+}
+
+.all-services >.slick-slider.center.slick-initialized> .slick-list > .slick-track> .slick-slide{
+    margin-top: 15vw;
+    z-index: 2;
 }
 
 .all-services >.slick-slider.center.slick-initialized> .slick-list > .slick-track> .slick-slide.slick-active.slick-center.slick-current{
-    width:70vw !important;
+    width: 60vw !important;
     display:flex !important;
     justify-content: center;
-    margin-top: 10px !important;
+    justify-self: center;
+    margin-top: 0vw !important;
 }
 
 .service-card{
@@ -44,4 +53,77 @@
     outline: none;
     border: none;
 
+}
+
+@media (max-width:320px){
+    .all-services >.slick-slider.center.slick-initialized> .slick-list > .slick-track> .slick-slide.slick-active.slick-center.slick-current{
+        width: 68vw !important;
+    }  
+    
+}
+
+@media (min-width:500px) and (max-width: 768px){
+    .all-services >.slick-slider.center.slick-initialized> .slick-list > .slick-track> .slick-slide.slick-active.slick-center.slick-current{
+        width: 45vw !important;
+    }
+
+    .title-our-services{
+        margin-bottom: 9.5vw;
+        font-size: 7.5vw !important;
+    }
+}  
+
+
+@media (min-width: 769px){
+    .title-our-services{
+        font-size: 40px;
+        margin-bottom: 100px;
+    }
+    .all-services{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+    }
+
+    .all-services > .slick-slider.center.slick-initialized{
+        height: 550px !important;
+        width: 100vw !important;
+    }
+    
+    .all-services >.slick-slider.center.slick-initialized> .slick-list {
+        width: 100vw !important;
+        margin: 0;
+    }
+
+    .all-services >.slick-slider.center.slick-initialized> .slick-list > .slick-track> .slick-slide{
+        margin-top: 170px;
+        
+    }
+    
+    .all-services >.slick-slider.center.slick-initialized> .slick-list > .slick-track{
+        height: 650px !important;
+    }
+    
+    .all-services >.slick-slider.center.slick-initialized> .slick-list > .slick-track> .slick-slide.slick-active.slick-center.slick-current{
+        width:700px !important;
+        margin-top: 0px !important;
+    }
+    
+    .service-card{
+        width:100% !important;
+    }
+    
+}
+
+@media (min-width: 1440px){
+    .title-our-services{
+        font-size: 50px;
+    }
+    .all-services > .slick-slider.center.slick-initialized{
+        max-width: 1440px !important;
+    }
+    
+    .all-services >.slick-slider.center.slick-initialized> .slick-list {
+        max-width: 1440px !important;
+    }
 }
