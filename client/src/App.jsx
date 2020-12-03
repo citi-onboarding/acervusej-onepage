@@ -1,10 +1,10 @@
 import {
-  PostList,
+  Gallery,
 } from './components/index';
 
 function App() {
   return (
-    <PostList />
+    <Gallery />
   );
 }
 
