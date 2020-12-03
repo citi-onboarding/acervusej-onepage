@@ -1,0 +1,61 @@
+.aboutUsPostCompany {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.aboutUsPostText h3 {
+    display: none;
+}
+
+.aboutUsPostImage img {
+    margin: 3rem 0;
+    padding: 0;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .aboutUsPostCompany {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 6rem;
+    }
+    .aboutUsPostText {
+        width: 40%;
+        margin-left: 3rem;
+    }
+    .aboutUsPostImage {
+        width: 40rem;
+        height: 20rem;
+        margin-right: 3rem;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutUsPostImage img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .aboutUsPostText h3 {
+        margin: 1rem 0;
+        display: block;
+        font-size: 3rem;
+    }
+
+    .aboutUsPostText p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .aboutUsPostCompany {
+        max-width: 1440px;
+    }    
+}

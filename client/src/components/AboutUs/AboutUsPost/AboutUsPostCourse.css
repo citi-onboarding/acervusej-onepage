@@ -1,0 +1,58 @@
+.aboutUsPostCourse {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.aboutUsPostText h3 {
+    display: none;
+}
+
+.aboutUsPostImage img {
+    margin: 3rem 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+@media (min-width: 1024px) {
+    .aboutUsPostCourse {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        margin: 6rem 0;
+    }
+    .aboutUsPostText {
+        width: 40%;
+        margin-right: 3rem;
+    }
+    .aboutUsPostImage {
+        width: 40rem;
+        height: 20rem;
+        margin-left: 3rem;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutUsPostImage img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .aboutUsPostText h3 {
+        display: block;
+    }
+}
+
+@media (min-width: 1440px) {
+    .aboutUsPostCourse {
+        max-width: 1440px;
+    }   
+    .aboutUsPostText p {
+        font-size: 2.2rem;
+    }
+}
