@@ -38,6 +38,7 @@ section.mainBanner {
         height: 100vh;
         display: block;
         width: 100vw;
+        max-width: 1440px;
     }
 
     .mainBanner > div > button.slick-arrow.slick-next {
