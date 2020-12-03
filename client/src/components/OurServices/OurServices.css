@@ -79,6 +79,15 @@
         font-size: 40px;
         margin-bottom: 100px;
     }
+
+    .title-our-services:after {
+        content: "";
+        position: absolute;
+        height  : 50px;
+        width   : 128px; 
+        border-bottom:4px solid black;
+    }
+
     .all-services{
         display: flex;
         flex-direction: column;
@@ -119,6 +128,8 @@
     .title-our-services{
         font-size: 50px;
     }
+    .title-our-services:after{    height  : 60px;    }
+
     .all-services > .slick-slider.center.slick-initialized{
         max-width: 1440px !important;
     }
