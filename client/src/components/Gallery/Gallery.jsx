@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Slider from "react-slick";
+import GalleryCard from './GalleryCard/GalleryCard'
 
 
 import './Gallery.css';
@@ -18,10 +19,10 @@ function Gallery() {
             vertical: true,
             verticalSwiping: true,
             beforeChange: function(currentSlide, nextSlide) {
-              console.log("before change", currentSlide, nextSlide);
+              //console.log("before change", currentSlide, nextSlide);
             },
             afterChange: function(currentSlide) {
-              console.log("after change", currentSlide);
+              //console.log("after change", currentSlide);
             }
     }
 
@@ -35,7 +36,9 @@ function Gallery() {
     useEffect(() => {
         loadGallery();
     }, []);
-
+    gallery.map(({ image}) => (
+      console.log(image)
+    ));
     //console.log(gallery[0]?.image?.secure_url)
 
     return (
@@ -43,29 +46,11 @@ function Gallery() {
         <div>
         <h2>Vertical Mode</h2>
         <Slider {...settings}>
-          <div>
           {gallery.map(({ image }) => (
             <div className="banner-card">
-                <h3 src={image[0].secure_url} alt="Post de Exemplo"></h3>
+                <GalleryCard props={image} />
             </div>
         ))}
-            <h3></h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
         </Slider>
       </div>
         </>
