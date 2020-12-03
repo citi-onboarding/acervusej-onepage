@@ -10,12 +10,16 @@ function Footer () {
         <footer className="mainFooter" className='.container'>
             <div id="smContainer">
                 <div id="ftLinkedin" className="smLogo">
-                    <img src={linkedinLogo} alt=""/>
-                    <span>@acervusej</span>
+                    <a href="https://www.linkedin.com/company/acervusej/">
+                        <img src={linkedinLogo} alt=""/>
+                        <span>@acervusej</span>
+                    </a>
                 </div>
                 <div id="ftInstagram" className="smLogo">
-                    <img src={instagramLogo} alt=""/>
-                    <span>/acervusej</span>
+                    <a href="https://www.instagram.com/acervusej/">
+                        <img src={instagramLogo} alt=""/>
+                        <span>/acervusej</span>
+                    </a>
                 </div>
                 <div id="ftEmail" className="smLogo">
                     <img src={emailLogo} alt=""/>

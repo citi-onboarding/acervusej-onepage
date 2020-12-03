@@ -20,6 +20,12 @@ footer {
     align-items: center;
 }
 
+.smLogo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
 .smLogo span {
     margin-left: 2rem;
     color: #fff;
