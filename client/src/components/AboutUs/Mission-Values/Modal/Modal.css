@@ -32,7 +32,7 @@
     background: transparent;
     outline: none;
     border: none;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
     border-bottom: 0.25rem solid #000000;
@@ -46,7 +46,7 @@
     background: transparent;
     outline: none;
     border: none;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
     border-bottom: none;
@@ -59,6 +59,15 @@
     .mission-values {
         width: 100%;
     }
+    .mission-button {
+        font-size: 2.2rem;
+        width: 10;
+    }
+    .values-button {
+        font-size: 2.2rem;
+        width: 10;
+    }
+
 }
 
 @media (min-width: 1024px) {
@@ -71,7 +80,12 @@
 }
 
 @media (min-width: 1440px) {
-    .modal {
-        width: 100%;
+    .mission-button {
+        font-size: 2.4rem;
+        width: 12;
+    }
+    .values-button {
+        font-size: 2.4rem;
+        width: 12;
     }
 }

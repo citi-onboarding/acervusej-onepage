@@ -24,12 +24,14 @@ function Modal({ aboutUs, values }) {
         document.querySelector('.mission-button').style.borderBottom = 'none';
         document.querySelector('.mission-button').style.color = '#ababab';
     }
+
     return (
         <div className="mission-values">
             <div className="buttons">
                 <button className="mission-button" onClick={toggleShowMissionText}>Missão</button>
                 <button className="values-button" onClick={toggleShowValuesText}>Valores</button>
             </div>
+
             <div className="modal">
                 <Mission mission={aboutUs?.mission} />
                 <Values props={values} />

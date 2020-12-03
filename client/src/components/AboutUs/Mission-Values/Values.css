@@ -1,5 +1,5 @@
 .values {
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -8,7 +8,7 @@
     padding-top: 2rem;
     padding-bottom: 10rem;
     margin: 3rem 0;
-    max-width: 1036px;
+    max-width: 1440px;
 }
 
 .value {
@@ -48,7 +48,7 @@
         height: 7rem;
         margin: 3rem 7rem;
     }
-    .value img {
+    #value-image {
         width: 7rem;
     }
     .text-value {
@@ -57,8 +57,12 @@
 }
 
 @media (min-width: 1024px) {
-    .value img {
+    .value {
+        margin: 3rem 10rem;
+    }
+    #value-image {
         width: 10rem;
+        margin: 1rem 1rem;
     }
     .text-value {
         font-size: 2rem;
@@ -67,6 +71,14 @@
 
 @media (min-width: 1440px) {
     .value {
-        margin: 7rem 7rem;
+        margin: 7rem 18rem;
+    }
+    #value-image {
+        width: 12rem;
+        height: 12rem;
+        margin: 2rem 2rem;
+    }
+    .text-value {
+        font-size: 2.2rem;
     }
 }
