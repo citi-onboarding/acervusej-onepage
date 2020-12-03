@@ -6,8 +6,10 @@ function Service({image,title,desc}){
         <section className = "card-service">
             <div className = "container-service">
                 <img className = "image-service" src = {image}></img>
-                <h2 className = "title-service">{title}</h2>
-                <p className = "desc-service">{desc}</p>
+                <div className = "written-service">
+                    <h2 className = "title-service">{title}</h2>
+                    <p className = "desc-service">{desc}</p>
+                </div>
             </div>
         </section>
     )
