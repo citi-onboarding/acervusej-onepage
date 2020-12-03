@@ -1,0 +1,46 @@
+footer {
+    margin: auto;
+    width: 100%;
+    max-width: 1440px;
+    background-color: #202020;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20rem;
+}
+
+#smContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.smLogo {
+    margin: 0.9rem 1.7rem;
+    display: flex;
+    align-items: center;
+}
+
+.smLogo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.smLogo span {
+    margin-left: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 769px) {
+    #smContainer {
+        flex-direction: row;
+        margin: auto;
+        width: 90vw;
+        max-width: 1440px;
+    }
+
+    .smLogo:nth-child(2), .smLogo:nth-child(3) {
+        margin-left: 3rem;
+    }
+}
