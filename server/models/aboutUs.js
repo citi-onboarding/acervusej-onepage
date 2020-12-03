@@ -1,10 +1,33 @@
 const keystone = require('keystone');
+const { Relationship } = require('keystone/lib/fieldTypes');
 
 const { Types } = keystone.Field;
 
 const AboutUs = new keystone.List('AboutUs', {
     map: { name: 'key' },
     label: 'Sobre nós',
+});
+
+const Values = new keystone.List('Values', {
+    map: { name: 'title' },
+    label: 'Valores',
+})
+
+Values.add({
+    title: {
+        type: Types.Text,
+        required: true,
+        initial: true,
+        label: 'Valor',
+        note: 'Insira um valor da empresa'
+    },
+    image: {
+        type: Types.CloudinaryImage,
+        required: true,
+        initial: true,
+        label: 'Imagem sobre o valor',
+        note: 'Insira uma imagem que represente esse valor'
+    },
 });
 
 AboutUs.add({
@@ -61,15 +84,14 @@ AboutUs.add({
         },
     },
     values: {
-        file: {
-            type: Types.CloudinaryImages,
-            required: true,
-            initial: true,
-            label: 'Valores',
-            note: 'Insira os valores da empresa'
-        },
-        },
+        type: Relationship,
+        ref: 'Values',
+        many: true,
+        required: false,
+        initial: true,
+    }
 
 });
 
+Values.register();
 AboutUs.register();

@@ -8,30 +8,26 @@ import Modal from './Mission-Values/Modal/Modal'
 
 function AboutUs() {
     const [aboutUs, setAboutUs] = useState({
-
-        aboutCompany: {
-            label: '',
-            description: '',
-            image: {
-                secure_url: '',
-            },
-        },
-        aboutCourse: {
-            label: '',
-            description: '',
-            image: {
-                secure_url: '',
-            },
-        },
-        mission: {
-            description: ''
-        },
-        vision: {
-            description: ''
-        },
+        aboutCompany: { label: '', description: '', image: { secure_url: '' } },
+        aboutCourse: { label: '', description: '', image: { secure_url: '' } },
+        mission: { description: '' },
+        values: '',
         _id: ''
-    },
-    );
+    });
+
+    const [values, setValues] = useState(
+        {
+            _id: '', title: '', image: { secure_url: '' }
+        });
+
+    const loadValues = async () => {
+        const res = await axios.get('http://localhost:3001/api/values');
+        setValues(res.data);
+    }
+
+    useEffect(() => {
+        loadValues();
+    }, []);
 
 
     const loadAboutUs = async () => {
@@ -40,23 +36,15 @@ function AboutUs() {
             aboutCompany: {
                 label: res.data[0].key,
                 description: res.data[0].aboutCompany.description,
-                image: {
-                    secure_url: res.data[0].aboutCompany.image.secure_url,
-                },
+                image: { secure_url: res.data[0].aboutCompany.image.secure_url },
             },
             aboutCourse: {
                 label: res.data[0].aboutCourse.key,
                 description: res.data[0].aboutCourse.description,
-                image: {
-                    secure_url: res.data[0].aboutCourse.image.secure_url,
-                },
+                image: { secure_url: res.data[0].aboutCourse.image.secure_url },
             },
-            mission: {
-                description: res.data[0].mission.description,
-            },
-            vision: {
-                description: res.data[0].vision.description,
-            },
+            mission: { description: res.data[0].mission.description },
+            values: res.data[0].values,
             _id: res.data[0]._id
         })
     };
@@ -65,6 +53,21 @@ function AboutUs() {
         loadAboutUs();
     }, []);
 
+    const checkedValues = [];
+
+    function Search() {
+        for (let i = 0; i <= aboutUs.values.length; i++) {
+            for (let j = 0; j <= values.length; j++) {
+                if (values[j]?._id === aboutUs.values[i]) {
+                    checkedValues.push(values[j]);
+                }
+            }
+        }
+        checkedValues.pop();
+    }
+
+    Search();
+
     return (
         <div className="aboutUs">
             <div className="container" id="contentAboutUs">
@@ -72,12 +75,12 @@ function AboutUs() {
                     <h1>A Acervus</h1>
                 </div>
                 <AboutUsPostCompany props={aboutUs} />
-                
+
                 <div className="title" id="Second" >
                     <h1>Museologia</h1>
                 </div>
-                    <AboutUsPostCourse props={aboutUs}/>                
-                <Modal props={aboutUs} />      
+                <AboutUsPostCourse props={aboutUs} />
+                <Modal aboutUs={aboutUs} values={checkedValues} />
             </div>
         </div>
     );

@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import MissionValues from '../Mission-Values'
+import Mission from '../Mission'
+import Values from '../Values';
 import './Modal.css'
 
-
-
-function Modal({props}) {
+function Modal({ aboutUs, values }) {
     const [change, setChange] = useState(false);
 
-     function toggleShowMissionText() {
+    function toggleShowMissionText() {
         setChange(false);
-        document.querySelector('.mission').style.display = 'flex';
+        document.querySelector('.mission').style.display = 'block';
         document.querySelector('.values').style.display = 'none';
         document.querySelector('.values-button').style.borderBottom = 'none';
         document.querySelector('.values-button').style.color = '#ababab';
@@ -25,20 +24,17 @@ function Modal({props}) {
         document.querySelector('.mission-button').style.borderBottom = 'none';
         document.querySelector('.mission-button').style.color = '#ababab';
     }
-
     return (
-
         <div className="mission-values">
             <div className="buttons">
                 <button className="mission-button" onClick={toggleShowMissionText}>Missão</button>
                 <button className="values-button" onClick={toggleShowValuesText}>Valores</button>
             </div>
             <div className="modal">
-                <MissionValues props={props} />
+                <Mission mission={aboutUs?.mission} />
+                <Values props={values} />
             </div>
-
         </div>
-
     );
 }
 
