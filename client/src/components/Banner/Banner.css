@@ -22,7 +22,10 @@ section.mainBanner {
 .mainBanner > .slick-slider > .slick-list > .slick-track > .slick-slide > div > .banner-card > img {
     height: 100vh;
     display: block;
-    width: 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%)
 }
 
 .mainBanner > .slick-slider > .slick-dots li button {
@@ -30,6 +33,13 @@ section.mainBanner {
 }
 
 @media screen and (min-width: 769px) {
+
+    .mainBanner > .slick-slider > .slick-list > .slick-track > .slick-slide > div > .banner-card > img {
+        height: 100vh;
+        display: block;
+        width: 100vw;
+    }
+
     .mainBanner > div > button.slick-arrow.slick-next {
         right: 10%;
         display: block !important;
