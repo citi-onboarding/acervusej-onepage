@@ -95,23 +95,30 @@
 }
 
 @media (min-width:969px) {
+  
+
     .card-service{
-        width: 737px;
-        height: 550px;
+        width: 680px;
+        height: 500px;
         box-shadow: none;
     }
 
+    .title-service{
+        font-size: 20px;
+        height: 20px;
+    }
+
     .image-service{
-        height: 395px;
+        height: 355px;
         width: 100%;
     }
     .desc-service{
-        font-size:19px;
+        font-size:17px;
         width:60%;
     }
 }
 
-@media (min-width:1340px){
+@media (min-width:1440px){
     .card-service{
         width: 877px;
         height: 650px;
