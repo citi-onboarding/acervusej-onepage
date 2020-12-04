@@ -1,8 +1,8 @@
 import {
   Banner,
   Header,
-  Footer,
   AboutUs,
+  Footer,
 } from './components/index';
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
     <>
       <Header />
       <Banner />
-      <Footer />
       <AboutUs />
+      <Footer />
     </>
   );
 }
