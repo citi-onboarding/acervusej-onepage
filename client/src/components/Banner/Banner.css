@@ -32,23 +32,28 @@ section.mainBanner {
     transform: scale(2.5);
 }
 
-.arrow {
-    width: 2rem !important;
-}
-
-#leftArrow {
-    left: 11%;
-}
-
-#rightArrow {
-    left: 89%;
-}
-
-button.slick-arrow {
-    opacity: 0;
+.mainBanner > .slick-slider > .slick-list > .slick-track > .slick-slide > div > .banner-card > .arrow {
+    display: none;
 }
 
 @media screen and (min-width: 769px) {
+
+    .mainBanner > .slick-slider > .slick-list > .slick-track > .slick-slide > div > .banner-card > .arrow {
+        display: block;
+        width: 2rem !important;
+    }
+    
+    #leftArrow {
+        left: 11%;
+    }
+    
+    #rightArrow {
+        left: 89%;
+    }
+    
+    button.slick-arrow {
+        opacity: 0;
+    }
 
     .mainBanner > .slick-slider > .slick-list > .slick-track > .slick-slide > div > .banner-card > img {
         height: 100vh;
