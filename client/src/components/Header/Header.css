@@ -190,7 +190,6 @@ header > div > nav > a {
         list-style: none;
         display: flex;
         flex-direction: row;
-        margin-right: 2vw;
     }
     
     #navItems1 ul li {
