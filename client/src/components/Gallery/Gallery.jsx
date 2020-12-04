@@ -3,15 +3,13 @@ import axios from 'axios';
 import Slider from "react-slick";
 import GalleryCard from './GalleryCard/GalleryCard'
 
-
 import './Gallery.css';
-
 
 function Gallery() {
     const settings = {
         dots: true,
             infinite: true,
-            slidesToShow: 3,
+            slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
             speed: 2000,
@@ -19,10 +17,10 @@ function Gallery() {
             vertical: true,
             verticalSwiping: true,
             beforeChange: function(currentSlide, nextSlide) {
-              //console.log("before change", currentSlide, nextSlide);
+              console.log("before change", currentSlide, nextSlide);
             },
             afterChange: function(currentSlide) {
-              //console.log("after change", currentSlide);
+              console.log("after change", currentSlide);
             }
     }
 
@@ -36,21 +34,23 @@ function Gallery() {
     useEffect(() => {
         loadGallery();
     }, []);
-    gallery.map(({ image}) => (
-      console.log(image)
-    ));
-    //console.log(gallery[0]?.image?.secure_url)
+
+    // gallery.map(({image}) => (
+    //     console.log(image),
+    //     console.log('oi')
+    // ));
 
     return (
-        <>
-        <div>
+        <> 
+            <div>
         <h2>Vertical Mode</h2>
         <Slider {...settings}>
-          {gallery.map(({ image }) => (
-            <div className="banner-card">
-                <GalleryCard props={image} />
-            </div>
-        ))}
+          <div className='teste'>
+            <img src={gallery[0]?.image?.secure_url} alt=""/>
+          </div>
+          <div className='teste'>
+            <img src={gallery[1]?.image?.secure_url} alt=""/>
+          </div>
         </Slider>
       </div>
         </>

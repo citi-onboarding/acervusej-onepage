@@ -1,9 +1,10 @@
 import React from 'react';
 
-function GalleryCard({props}) {
+console.log("aqui")
+function GalleryCard({image, id}) {
     return (
         <>
-            <img src={props.secure_url} alt="Post de Exemplo"></img>
+            <img key={id} src={image.secure_url} alt=""/>
         </>
     );
 }
