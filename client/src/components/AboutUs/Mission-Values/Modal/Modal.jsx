@@ -24,7 +24,7 @@ function Modal({ mission, values }) {
         document.querySelector('.mission-button').style.borderBottom = 'none';
         document.querySelector('.mission-button').style.color = '#ababab';
     }
-    console.log(values);
+    
     return (
         <div className="mission-values">
             <div className="buttons">
