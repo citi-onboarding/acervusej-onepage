@@ -11,7 +11,7 @@ function AboutUs() {
         aboutCompany: { label: '', description: '', image: { secure_url: '' } },
         aboutCourse: { label: '', description: '', image: { secure_url: '' } },
         mission: { description: '' },
-        values: '',
+        values: [],
         _id: ''
     });
 
