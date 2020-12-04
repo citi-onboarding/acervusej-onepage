@@ -1,6 +1,7 @@
 import {
   Banner,
   Header,
+  AboutUs,
   Footer,
 } from './components/index';
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <Header />
       <Banner />
+      <AboutUs />
       <Footer />
     </>
   );
