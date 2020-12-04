@@ -1,8 +1,21 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import './Contact.css';
 import logo from '../../assets/Logo-contact.png'
+import axios from 'axios';
 
 function Contact (){
+
+    const [contactReasons, getReason] = useState([]);
+
+    const loadReasons = async () => {
+    const res = await axios.get('http://localhost:3001/api/contact-reasons');
+        getReason(res.data);
+    };
+
+    useEffect(() => {
+        loadReasons();
+    }, []);
+
     return(
         <div className = "contact-box">
             <div className = "container">
@@ -28,7 +41,7 @@ function Contact (){
                         <div>
                             <p>Motivo</p>
                             <select id="reasons-box" >
-                                <option></option>
+                                {contactReasons.map(({ _id, reason }) => (<option id = {_id} >{reason}</option>))}
                             </select>
                         </div>
                         <div>
