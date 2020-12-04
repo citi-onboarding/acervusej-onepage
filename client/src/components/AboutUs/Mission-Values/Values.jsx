@@ -1,11 +1,12 @@
 import React from 'react';
 import './Values.css'
 
-function Values({ props }) {
+function Values({ values }) {
+    console.log(values)
     return (
         <div className="values">
             {
-                props.map(({ _id, title, image }) => (
+                values.map(({ _id, title, image }) => (
                     <div key={_id} className="value">
                         <img src={image?.secure_url} alt="" id="value-image"></img>
                         <h3 className="text-value" >{title}</h3>

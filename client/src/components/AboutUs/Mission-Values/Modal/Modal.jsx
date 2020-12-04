@@ -3,7 +3,7 @@ import Mission from '../Mission'
 import Values from '../Values';
 import './Modal.css'
 
-function Modal({ aboutUs, values }) {
+function Modal({ mission, values }) {
     const [change, setChange] = useState(false);
 
     function toggleShowMissionText() {
@@ -24,7 +24,7 @@ function Modal({ aboutUs, values }) {
         document.querySelector('.mission-button').style.borderBottom = 'none';
         document.querySelector('.mission-button').style.color = '#ababab';
     }
-
+    console.log(values);
     return (
         <div className="mission-values">
             <div className="buttons">
@@ -33,8 +33,8 @@ function Modal({ aboutUs, values }) {
             </div>
 
             <div className="modal">
-                <Mission mission={aboutUs?.mission} />
-                <Values props={values} />
+                <Mission mission={mission} />
+                <Values values={values} />
             </div>
         </div>
     );

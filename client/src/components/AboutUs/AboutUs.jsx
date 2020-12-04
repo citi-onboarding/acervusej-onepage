@@ -15,21 +15,6 @@ function AboutUs() {
         _id: ''
     });
 
-    const [values, setValues] = useState(
-        {
-            _id: '', title: '', image: { secure_url: '' }
-        });
-
-    const loadValues = async () => {
-        const res = await axios.get('http://localhost:3001/api/values');
-        setValues(res.data);
-    }
-
-    useEffect(() => {
-        loadValues();
-    }, []);
-
-
     const loadAboutUs = async () => {
         const res = await axios.get('http://localhost:3001/api/about-us');
         setAboutUs({
@@ -53,21 +38,6 @@ function AboutUs() {
         loadAboutUs();
     }, []);
 
-    const checkedValues = [];
-
-    function Search() {
-        for (let i = 0; i <= aboutUs.values.length; i++) {
-            for (let j = 0; j <= values.length; j++) {
-                if (values[j]?._id === aboutUs.values[i]) {
-                    checkedValues.push(values[j]);
-                }
-            }
-        }
-        checkedValues.pop();
-    }
-
-    Search();
-
     return (
         <div className="aboutUs">
             <div className="container" id="contentAboutUs">
@@ -80,7 +50,7 @@ function AboutUs() {
                     <h1>Museologia</h1>
                 </div>
                 <AboutUsPostCourse props={aboutUs} />
-                <Modal aboutUs={aboutUs} values={checkedValues} />
+                <Modal mission={aboutUs.mission} values={aboutUs.values} />
             </div>
         </div>
     );
