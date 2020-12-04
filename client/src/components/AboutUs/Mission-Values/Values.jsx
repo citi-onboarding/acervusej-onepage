@@ -1,12 +1,8 @@
 import React from 'react';
 import './Values.css'
 
-
-
-
 function Values({ props }) {
     return (
-
         <div className="values">
             {
                 props.map(({ _id, title, image }) => (
@@ -17,7 +13,6 @@ function Values({ props }) {
                 ))
             }
         </div>
-
     );
 }
 

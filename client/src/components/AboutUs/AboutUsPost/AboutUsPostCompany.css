@@ -37,18 +37,15 @@
         justify-content: center;
         align-items: center;
     }
-
     .aboutUsPostImage img {
         width: 100%;
         margin: 0;
     }
-
     .aboutUsPostText h3 {
         margin: 1rem 0;
         display: block;
         font-size: 3rem;
     }
-
     .aboutUsPostText p {
         font-size: 1.8rem;
     }
@@ -57,5 +54,5 @@
 @media (min-width: 1440px) {
     .aboutUsPostCompany {
         max-width: 1440px;
-    }    
+    }
 }
