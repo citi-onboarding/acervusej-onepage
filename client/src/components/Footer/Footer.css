@@ -1,7 +1,6 @@
 footer {
     margin: auto;
     width: 100%;
-    max-width: 1440px;
     background-color: #202020;
     display: flex;
     justify-content: flex-start;
@@ -15,7 +14,7 @@ footer {
 }
 
 .smLogo {
-    margin: 0.9rem 1.7rem;
+    margin: 0.9rem 0rem;
     display: flex;
     align-items: center;
 }
@@ -35,9 +34,6 @@ footer {
 @media screen and (min-width: 769px) {
     #smContainer {
         flex-direction: row;
-        margin: auto;
-        width: 90vw;
-        max-width: 1440px;
     }
 
     .smLogo:nth-child(2), .smLogo:nth-child(3) {
