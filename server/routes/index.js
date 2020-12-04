@@ -21,7 +21,7 @@ module.exports = (app) => {
     app.get('/api/services', serviceController.getServiceController);
     app.get('/api/banners', bannerController.getBannerController);
     app.get('/api/gallery', galleryController.getGallery);
-    app.get('/api/contactReasons', contactReasonsController.getContactReason);
+    app.get('/api/contact-reasons', contactReasonsController.getContactReason);
 
     app.get('*', (req, res) => {
         res.redirect('/');
