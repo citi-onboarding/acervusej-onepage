@@ -217,4 +217,8 @@ header > div > nav > a {
         margin: .7rem 2rem;
     }
 
+    .slick-dots li.slick-active button:before {
+        opacity: 1 !important;
+    }
+
 }
