@@ -1,10 +1,20 @@
 import {
+  Banner,
+  Header,
+  AboutUs,
   Gallery,
+  Footer,
 } from './components/index';
 
 function App() {
   return (
-    <Gallery />
+    <>
+      <Header />
+      <Banner />
+      <AboutUs />
+      <Gallery />
+      <Footer />
+    </>
   );
 }
 
