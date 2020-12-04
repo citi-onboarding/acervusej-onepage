@@ -1,10 +1,10 @@
 const keystone = require('keystone');
 
-const contact = keystone.list('Contact');
+const contactReasons = keystone.list('ContactReasons');
 
 module.exports = {
     getContactReason(req, res) {
-        contact.model.find((err, items) => {
+        contactReasons.model.find((err, items) => {
             if (err) {
                 console.log(err);
                 res.status(500).send('DB Error');

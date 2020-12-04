@@ -7,6 +7,7 @@ const aboutUsController = require('../controllers/aboutUsController');
 const serviceController = require('../controllers/serviceController.js');
 const bannerController = require('../controllers/bannerController');
 const galleryController = require('../controllers/galleryController');
+const contactReasonsController = require('../controllers/contactReasonsController');
 
 module.exports = (app) => {
     app.use(cors());
@@ -20,6 +21,7 @@ module.exports = (app) => {
     app.get('/api/services', serviceController.getServiceController);
     app.get('/api/banners', bannerController.getBannerController);
     app.get('/api/gallery', galleryController.getGallery);
+    app.get('/api/contactReasons', contactReasonsController.getContactReason);
 
     app.get('*', (req, res) => {
         res.redirect('/');
