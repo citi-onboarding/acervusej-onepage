@@ -30,9 +30,7 @@
 .title-service{
     font-size: 3.8vw;
     width: 70%;
-    text-align: center;
-
-    
+    text-align: center;   
 }
 
 .desc-service{
@@ -43,33 +41,37 @@
 
 .image-service{
     width: 100%;
-    height: 32vw;
+    height: 40%;
 }
 
 @media (min-width:500px) and (max-width: 768px){
     .card-service{
-        width: 49vw;
-        height: 92vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 41vw;
+        height: 80vw;
     }
     
     .container-service{
-        width: 41vw;
-        height: 84vw;
+        width: 34vw;
+        height: 70vw;
+    }
+
+    .title-service{
+        font-size: 3.5vw;
+    }
+    .desc-service{
+        font-size: 2.7vw;
     }
 }
 
 @media (min-width:769px) {
     .card-service{
-        width: 607px;
-        height: 450px;
+        width: 547px;
+        height: 410px;
         box-shadow: none;
     }
     
     .written-service{
-        height: 200px;
+        height: 180px;
     }
     .container-service{
         width: 100%;
@@ -77,44 +79,42 @@
     }
     
     .image-service{
-        height: 305px;
+        height: 286px;
         width: 100%;
     }
     
     .title-service{
         width: 70%;
-        font-size: 27px;
+        font-size: 18px;
         height: 30px;
     }
     
     .desc-service{
-        font-size:18px;
+        font-size:15px;
         text-align: center;
-        width:60%;
+        width:70%;
     }
 }
 
-@media (min-width:969px) {
-  
-
+@media (min-width: 1024px) {
     .card-service{
-        width: 680px;
-        height: 500px;
+        width: 620px;
+        height: 455px;
         box-shadow: none;
     }
 
-    .title-service{
-        font-size: 20px;
-        height: 20px;
-    }
-
     .image-service{
-        height: 355px;
+        height: 325px;
         width: 100%;
     }
+
+    .written-service{
+        height: 200px;
+    }
+
     .desc-service{
-        font-size:17px;
-        width:60%;
+        font-size:15.5px;
+        width:65%;
     }
 }
 
@@ -136,8 +136,7 @@
     }
     
     .title-service{
-        width: 70%;
-        
+        width: 70%;  
         font-size: 31px;
         height: 36px;
     }
