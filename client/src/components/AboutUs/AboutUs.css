@@ -1,0 +1,38 @@
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentAboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentAboutUs .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+#contentAboutUs #First {
+    margin-top: 10rem;
+}
+
+#contentAboutUs .title h1 {
+    font-size: 3rem;
+}
+
+@media (min-width: 1024px) {
+    #contentAboutUs .title {
+        border-bottom: 0.25rem solid #000000;
+    }
+    #contentAboutUs #Second h1 {
+        display: none;
+    }
+}

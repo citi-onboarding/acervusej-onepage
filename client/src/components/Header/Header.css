@@ -3,11 +3,11 @@ header {
     height: 10%;
     background-color: #fff;
     position: fixed;
+    z-index: 99;
 }
 
 #headerContainer {
     height: 100%;
-    margin: 0;
 }
 
 nav {
@@ -22,7 +22,7 @@ nav {
 }
 
 header > div > nav > a {
-    margin: .7rem 2rem;
+    margin: .7rem 0rem;
 }
 
 #navItems {
@@ -38,7 +38,8 @@ header > div > nav > a {
     position: fixed;
     padding-top: 5.7rem;
     list-style: none;
-    width: 100vw;
+    width: 90vw;
+    left: 3.33%;
     top: 10%;
 }
 
@@ -78,32 +79,19 @@ header > div > nav > a {
     text-decoration: none;
 }
 
-#menuButton {
+.menuButton {
     margin: 8rem 1.6rem;
     cursor: pointer;
     right: 1%;
     position: fixed;
 }
 
-
-#menuButton span {
-    display: block;
-    position: relative;
-    height: 0.4rem;
-    width: 3rem;
-    margin: 0.4rem;
-    background-color: #202020;
+.menuButton:focus {
+    outline: none;
 }
 
-#menuClose {
-    margin: 8rem 1.6rem;
-    cursor: pointer;
-    right: 1%;
-    display: none;
-    position: fixed;
-}
 
-#menuClose span {
+.menuButton span {
     transition: all 0.5s;
     display: block;
     position: relative;
@@ -113,16 +101,33 @@ header > div > nav > a {
     background-color: #202020;
 }
 
-#menuClose span:nth-child(1) {
+.menuClose {
+    margin: 8rem 1.6rem;
+    cursor: pointer;
+    right: 1%;
+    position: fixed;
+}
+
+.menuClose span {
+    transition: all 0.5s;
+    display: block;
+    position: relative;
+    height: 0.4rem;
+    width: 3rem;
+    margin: 0.4rem;
+    background-color: #202020;
+}
+
+.menuClose span:nth-child(1) {
     transform: rotate(45deg);
     top: 0.8rem;
 }
 
-#menuClose span:nth-child(2) {
+.menuClose span:nth-child(2) {
     display: none;
 }
 
-#menuClose span:nth-child(3) {
+.menuClose span:nth-child(3) {
     transform: rotate(-45deg);
 }
 
@@ -150,7 +155,7 @@ header > div > nav > a {
         justify-content: space-between;
     }
 
-    #menuButton {
+    .menuButton {
         display: none;
     }
 
@@ -185,7 +190,6 @@ header > div > nav > a {
         list-style: none;
         display: flex;
         flex-direction: row;
-        margin-right: 2vw;
     }
     
     #navItems1 ul li {
@@ -206,11 +210,14 @@ header > div > nav > a {
 
     #navLogo {
         width: 10rem;
-        margin-left: 2vw;
     }
 
     header > nav > a {
         margin: .7rem 2rem;
+    }
+
+    .slick-dots li.slick-active button:before {
+        opacity: 1 !important;
     }
 
 }

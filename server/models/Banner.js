@@ -17,7 +17,7 @@ Banner.add({
     note: 'Título da imagem',
   },
   image: {
-    type: Types.CloudinaryImage,
+    type: Types.CloudinaryImages,
     required: true,
     initial: true,
     label: 'Imagem',
