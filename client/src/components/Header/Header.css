@@ -8,7 +8,6 @@ header {
 
 #headerContainer {
     height: 100%;
-    margin: 0;
 }
 
 nav {
@@ -23,7 +22,7 @@ nav {
 }
 
 header > div > nav > a {
-    margin: .7rem 2rem;
+    margin: .7rem 0rem;
 }
 
 #navItems {
@@ -39,7 +38,8 @@ header > div > nav > a {
     position: fixed;
     padding-top: 5.7rem;
     list-style: none;
-    width: 100vw;
+    width: 90vw;
+    left: 3.33%;
     top: 10%;
 }
 
@@ -190,7 +190,6 @@ header > div > nav > a {
         list-style: none;
         display: flex;
         flex-direction: row;
-        margin-right: 2vw;
     }
     
     #navItems1 ul li {
@@ -215,6 +214,10 @@ header > div > nav > a {
 
     header > nav > a {
         margin: .7rem 2rem;
+    }
+
+    .slick-dots li.slick-active button:before {
+        opacity: 1 !important;
     }
 
 }

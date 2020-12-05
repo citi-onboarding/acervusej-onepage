@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Slider from "react-slick";
-
-
 import './Banner.css';
+
+import rightArrow from '../../assets/right_arrow.svg';
+import leftArrow from '../../assets/left_arrow.svg';
 
 function Banner() {
     const settings = {
@@ -33,6 +34,8 @@ function Banner() {
         {banners.map(({ _id, image }) => (
             <div key={_id} className="banner-card">
                 <img src={image[0].secure_url} alt="Post de Exemplo"/>
+                <img src={leftArrow} alt="" className="arrow" id="leftArrow"/>
+                <img src={rightArrow} alt="" className="arrow" id="rightArrow"/>
             </div>
         ))}
       </Slider>

@@ -7,8 +7,8 @@ import emailLogo from '../../assets/Email.svg';
 
 function Footer () {
     return (
-        <footer className="mainFooter" className='.container'>
-            <div id="smContainer">
+        <footer className="mainFooter">
+            <div id="smContainer" className='container'>
                 <div id="ftLinkedin" className="smLogo">
                     <a href="https://www.linkedin.com/company/acervusej/">
                         <img src={linkedinLogo} alt=""/>
