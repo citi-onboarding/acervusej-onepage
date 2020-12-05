@@ -1,5 +1,9 @@
+
+
 .all-services{
     margin-bottom: 30px;
+    padding: 0px !important;
+    margin: 0px !important;
 }
 
 .title-our-services{
@@ -19,12 +23,12 @@
 }
 
 .all-services > .slick-slider.center.slick-initialized>.slick-arrow.slick-next{
-    right: 0px !important;
+    right: 10px !important;
     display: none;
 }
 
 .all-services > .slick-slider.center.slick-initialized>.slick-arrow.slick-prev{
-    left: 0px !important;
+    left: 10px !important;
     display: none;
 }
 
@@ -110,11 +114,11 @@
 
     .all-services > .slick-slider.center.slick-initialized{
         height: 450px !important;
-        width: 100vw !important;
+        width: 100% !important;
     }
     
     .all-services >.slick-slider.center.slick-initialized> .slick-list {
-        width: 100vw !important;
+        width: 100% !important;
         margin: 0;
     }
 

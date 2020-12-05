@@ -20,7 +20,7 @@
 
 .written-service{
     width: 100%;
-    height: 45vw;
+    height: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,16 +30,20 @@
 .title-service{
     font-size: 3.8vw;
     width: 70%;
-    text-align: center;   
+    text-align: center;  
 }
 
 .desc-service{
     font-size:3.2vw;
     text-align: justify;
-    width:100%
+    width:100%;
+    overflow-y: auto;
+    max-height: 30vw;
+    min-height: 18vw;
 }
 
 .image-service{
+    object-fit: cover;
     width: 100%;
     height: 40%;
 }
@@ -56,10 +60,12 @@
     }
 
     .title-service{
-        font-size: 3.5vw;
+        font-size: 3.2vw;
     }
     .desc-service{
         font-size: 2.7vw;
+        max-height: 25vw;
+        min-height: 20.5vw;
     }
 }
 
@@ -86,13 +92,14 @@
     .title-service{
         width: 70%;
         font-size: 18px;
-        height: 30px;
     }
     
     .desc-service{
         font-size:15px;
         text-align: center;
         width:70%;
+        min-height: 10px;
+        max-height: 60px !important;
     }
 }
 
@@ -114,7 +121,6 @@
 
     .desc-service{
         font-size:15.5px;
-        width:65%;
     }
 }
 
@@ -137,13 +143,13 @@
     
     .title-service{
         width: 70%;  
-        font-size: 31px;
-        height: 36px;
+        font-size: 30px;
     }
     
     .desc-service{
         font-size:22px;
-        text-align: center;
-        width:65%;
+        max-height: 100px !important;
+        min-height: 50px;
     }
+
 }
