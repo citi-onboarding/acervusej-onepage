@@ -1,0 +1,9 @@
+.gallery-image {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.gallery-image img {
+    width: 100%;
+}
+
