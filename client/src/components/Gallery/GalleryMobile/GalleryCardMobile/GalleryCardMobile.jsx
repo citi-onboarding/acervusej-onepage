@@ -1,13 +1,10 @@
 import React from "react";
 
-import './GalleryCard.css';
+import './GalleryCardMobile.css';
 
-function GalleryCard({ post }) {
-    const style = {
-        background: 'url(post?.image?.secure_url)'
-    }
+function GalleryCardMobile({ post }) {
   return (
-      <div className='card' key={post?._id}>
+      <div className='cardMobile' key={post?._id}>
         <div className="gallery-image">
           <img src={post?.image?.secure_url} alt={post?.title} />
         </div>
@@ -18,4 +15,4 @@ function GalleryCard({ post }) {
   );
 }
 
-export default GalleryCard;
+export default GalleryCardMobile;

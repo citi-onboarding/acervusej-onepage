@@ -1,28 +1,28 @@
-.card {
+.cardMobile {
  height: 15rem; 
  position: relative;  
 }
 
-.gallery-image {
+.cardMobile .gallery-image {
     display: flex;
     justify-content: center;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.3);
     
 }
-.gallery-image img {
+.cardMobile .gallery-image img {
     width: 100%;
     z-index: -1;
 }
 
-.gallery-title {
+.cardMobile .gallery-title {
     position: absolute;
     width: 100%;
     padding-right: 1rem;
     bottom: 3px;
 }
 
-.gallery-title h2{
+.cardMobile .gallery-title h2{
     font-size: 2rem;
     text-align: right;
     color: white;

@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Slider from "react-slick";
-import GalleryCard from "./GalleryCard/GalleryCard";
+import GalleryCardMobile from "./GalleryCardMobile/GalleryCardMobile";
 
 import "./GalleryMobile.css";
 
-function GalleryMobile() {    
+function GalleryMobile() {
 
   const settings = {
     infinite: true,
@@ -16,12 +16,12 @@ function GalleryMobile() {
     autoplaySpeed: 2000,
     vertical: true,
     verticalSwiping: true,
-    beforeChange: function (currentSlide, nextSlide) {
-      console.log("before change", currentSlide, nextSlide);
-    },
-    afterChange: function (currentSlide) {
-      console.log("after change", currentSlide);
-    },
+    // beforeChange: function (currentSlide, nextSlide) {
+    //   console.log("before change", currentSlide, nextSlide);
+    // },
+    // afterChange: function (currentSlide) {
+    //   console.log("after change", currentSlide);
+    // },
   };
 
   const [galleryMobile, setGalleryMobile] = useState({
@@ -40,15 +40,15 @@ function GalleryMobile() {
   }, []);
 
   return (
-    <>
+    <div className='galleryMobile'>
       <Slider {...settings}>
         {galleryMobile.posts.map((post) => (
           <div>
-            <GalleryCard post={post} />
+            <GalleryCardMobile post={post} />
           </div>
         ))}
       </Slider>
-    </>
+    </div>
   );
 }
 

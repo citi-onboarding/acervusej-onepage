@@ -1,5 +1,6 @@
 import React from "react";
-import GalleryMobile from "./GalleryMobile";
+import GalleryMobile from "./GalleryMobile/GalleryMobile";
+import GalleryDesktop from "./GalleryDesktop/GalleryDesktop";
 
 import "./Gallery.css";
 
@@ -21,7 +22,7 @@ function Gallery() {
           </div>
           <div className="carousel">
             {
-              width < breakpoint ? <GalleryMobile /> : null
+              width < breakpoint ? <GalleryMobile /> : <GalleryDesktop />
             }
           </div>
         </div>

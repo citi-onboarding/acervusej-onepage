@@ -1,0 +1,36 @@
+.cardDesktop {
+    width: 100%;
+    height: 100%; 
+    position: relative;
+    overflow: hidden;  
+}
+
+.cardDesktop .gallery-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  
+}
+.cardDesktop .gallery-image img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.cardDesktop .gallery-title {
+    position: absolute;
+    width: 100%;
+    padding-right: 1rem;
+    bottom: 3px;
+}
+
+.cardDesktop .gallery-title h2{
+    font-size: 2rem;
+    text-align: right;
+    color: white;
+}
