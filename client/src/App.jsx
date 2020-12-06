@@ -9,7 +9,11 @@ import {
 function App() {
   return (
     <>
+      <Header />
+      <Banner />
+      <AboutUs />
       <Gallery />
+      <Footer />
     </>
   );
 }
