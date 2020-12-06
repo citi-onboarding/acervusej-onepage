@@ -22,7 +22,6 @@ function Header() {
                     <span></span>
                 </div>
             </nav>
-            {isMenuVisible ? <NavItems /> : null}
             <div id="navItems1">
                 <ul>
                     <li><a href="">Home</a></li>
@@ -31,11 +30,9 @@ function Header() {
                     <li><a href="">Galeria</a></li>
                     <li><a href="">Contato</a></li>
                 </ul>
-                <button id="navContact">
-                    <a href="">Fale conosco</a>
-                </button>
             </div>
         </div>
+        {isMenuVisible ? <NavItems /> : null}
     </header>
   );
 }
