@@ -1,4 +1,5 @@
 import {
+  OurServices,
   Banner,
   Header,
   AboutUs,
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Banner />
       <AboutUs />
+      <OurServices/>
       <Footer />
     </>
   );
