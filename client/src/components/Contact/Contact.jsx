@@ -41,13 +41,14 @@ function Contact (){
                         <div>
                             <p>Motivo</p>
                             <select id="reasons-box" >
-                                {contactReasons.map(({ _id, reason }) => (<option id = {_id} >{reason}</option>))}
+                                {contactReasons.map(({ _id, reason }) => (<option key = {_id} >{reason}</option>))}
                             </select>
                         </div>
                         <div>
                             <p>Mensagem</p>
-                            <input id = "input-message-contact"></input>
+                            <textarea id = "input-message-contact"></textarea>
                         </div>
+                        <button className = "button-contact">Enviar</button>
                     </div>
                 </div>
             </div>

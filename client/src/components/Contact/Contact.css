@@ -63,17 +63,42 @@
     background-color: var(--color-background);
     height: 19px;
     width: 155px;
+    font-family: TwCenMT;
+    font-size: 14px;
 }
 
 #reasons-box:focus{
     outline: none;
 }
 
-
+#reasons-box > option{
+    font-size: 14px;
+}
 
 #input-message-contact{
     height: 116px;
+    resize: none;
+    width: 258px;
+    border: none;
+    padding: 2px;
 }
+
+#input-message-contact:focus{
+    outline: none;
+}
+
+.button-contact{
+    
+    height: 19px;
+    width: 108px;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-footer);
+}
+
+.button-contact:focus{
+    outline: none;
+}
+
 
 @media (min-width:769px){
     .contact-box{
@@ -108,6 +133,60 @@
     .inputs-contact >div>p{
         font-size: 12px;
     }
+}
 
+@media (min-width:1025px){
+    .contact-box{
+        height: 600px;
+    }
+    .contact-box >.container{
+        height: 600px;
+    }
+   
+    .contact-logo{
+        margin-top:150px;
+    }
+     
+    .right-contact{
+        height:600px;
+    }
+
+    .inputs-contact{
+        height:430px;
+    }
+
+    .inputs-contact> div> p{
+        font-size: 14px;
+    }
+
+    .inputs-contact> div>input{
+        height: 22px;
+        width: 350px;
+        padding: 4px;
+    }
+    
+    #input-number-contact{
+        width: 150px;
+    }
+    
+    #reasons-box{
+        height: 22px;
+        width: 220px;
+        font-size: 16px;
+    }
+    
+    #reasons-box > option{
+        font-size: 16px;
+    }
+    
+    #input-message-contact{
+        width: 350px !important;
+        padding: 4px;
+    }
+    
+    .button-contact{
+        height: 22px;
+        width: 158px;
+    }
 
 }
