@@ -9,7 +9,7 @@ function GalleryCardDesktop({ post }) {
           <img src={post?.image?.secure_url} alt={post?.title} />
         </div>
         <div className="gallery-title">
-          <h2>{post?.title}</h2>
+          <h3>{post?.title}</h3>
         </div>
       </div>
   );
