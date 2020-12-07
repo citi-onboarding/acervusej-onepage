@@ -3,6 +3,9 @@ import axios from "axios";
 import Slider from "react-slick";
 import GalleryCardMobile from "./GalleryCardMobile/GalleryCardMobile";
 
+import rightArrow from '../../../assets/right_arrow.svg';
+import leftArrow from '../../../assets/left_arrow.svg';
+
 import "./GalleryMobile.css";
 
 function GalleryMobile() {
@@ -16,12 +19,6 @@ function GalleryMobile() {
     autoplaySpeed: 1000,
     vertical: true,
     verticalSwiping: false,
-    // beforeChange: function (currentSlide, nextSlide) {
-    //   console.log("before change", currentSlide, nextSlide);
-    // },
-    // afterChange: function (currentSlide) {
-    //   console.log("after change", currentSlide);
-    // },
   };
 
   const [galleryMobile, setGalleryMobile] = useState({
@@ -41,6 +38,7 @@ function GalleryMobile() {
 
   return (
     <div className='galleryMobile'>
+      <img src={leftArrow} alt="" className="arrowLeft"/>
       <Slider {...settings}>
         {galleryMobile.posts.map((post) => (
           <div>
@@ -48,6 +46,7 @@ function GalleryMobile() {
           </div>
         ))}
       </Slider>
+      <img src={rightArrow} alt="" className="arrowRight"/>
     </div>
   );
 }
