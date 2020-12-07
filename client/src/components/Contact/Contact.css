@@ -40,6 +40,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     margin-bottom: 10px;
+    font-size: 12px;
 }
 
 .inputs-contact> div>input{
@@ -64,15 +65,10 @@
     height: 19px;
     width: 154px;
     font-family: TwCenMT;
-    font-size: 14px;
 }
 
 #reasons-box:focus{
     outline: none;
-}
-
-#reasons-box > option{
-    font-size: 14px;
 }
 
 #input-message-contact{
@@ -89,10 +85,12 @@
 
 .button-contact{
     cursor: pointer;
-    height: 19px;
-    width: 108px;
+    width: 52px;
+    height: 32px;
     background-color: var(--color-background);
-    border: 1px solid var(--color-footer);
+    border: 2px solid var(--color-footer);
+    font-family: TwCenMTBold;
+    font-size: 12px;
 }
 
 .button-contact:focus{
@@ -100,7 +98,7 @@
 }
 
 .button-contact:hover{
-    opacity: 0.8;
+    background-color:rgba(226, 222, 222, 0.938) ;
 }
 
 
@@ -110,7 +108,7 @@
     }
     
     .contact-box >.container{
-        height: 600px;
+        height: 500px;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -121,7 +119,7 @@
         margin-top: 120px;
     }
     .right-contact{
-        height:450px;
+        height:470px;
 
     }
     
@@ -137,6 +135,11 @@
     .inputs-contact >div>p{
         font-size: 12px;
     }
+
+    .button-contact{
+        align-self: flex-end;
+
+    }
 }
 
 @media (min-width:1025px){
@@ -148,6 +151,7 @@
     }
    
     .contact-logo{
+        height: 70px;
         margin-top:150px;
     }
      
@@ -189,8 +193,11 @@
     }
     
     .button-contact{
-        height: 22px;
-        width: 158px;
+        width: 91px;
+        height: 40px;
+        font-size: 16px;
+        align-self: flex-end;
+
     }
 }
 
