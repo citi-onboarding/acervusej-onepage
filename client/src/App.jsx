@@ -1,8 +1,9 @@
 import {
-  OurServices,
-  Banner,
   Header,
+  Banner,
   AboutUs,
+  OurServices,
+  Gallery,
   Footer,
   Contact,
 } from './components/index';
@@ -14,6 +15,7 @@ function App() {
       <Banner />
       <AboutUs />
       <OurServices/>
+      <Gallery />
       <Contact/>
       <Footer />
     </>

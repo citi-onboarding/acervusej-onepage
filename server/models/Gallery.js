@@ -2,7 +2,7 @@ const keystone = require('keystone');
 const { Types } = keystone.Field;
 
 const Gallery = new keystone.List('Gallery', {
-    map: { name: 'name' },
+    map: { name: 'title' },
     label: 'Galeria',
 });
 
@@ -27,7 +27,7 @@ Gallery.add({
         requeired: true,
         initial: true,
         label: 'Descrição',
-        note: 'Descrição sobreo post'
+        note: 'Descrição sobre o post'
     }
 
 });
