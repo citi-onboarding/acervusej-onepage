@@ -5,6 +5,7 @@ import {
   OurServices,
   Gallery,
   Footer,
+  Contact,
 } from './components/index';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <AboutUs />
       <OurServices/>
       <Gallery />
+      <Contact/>
       <Footer />
     </>
   );
