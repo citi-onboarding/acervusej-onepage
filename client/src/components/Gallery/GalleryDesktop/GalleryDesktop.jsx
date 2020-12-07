@@ -17,7 +17,7 @@ function GalleryDesktop() {
         speed: 1000,
         rows: 2,
         slidesPerRow: 1,
-        autoplay: true
+        autoplay: false
     };
 
     const [galleryDesktop, setGalleryDesktop] = useState({

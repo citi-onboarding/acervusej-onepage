@@ -26,7 +26,7 @@
 }
 
 .galleryDesktop .slick-list .slick-track > div {
-    width: 44rem !important;
+    width: 32% !important;
     height: 100%;
     margin: 0 1rem;
     display: flex;
@@ -49,32 +49,40 @@
 }
 
 .galleryDesktop .slick-arrow.slick-prev{
-    left: 0;
+    left: -3rem;
     width: 5rem;
     height: 97%;
     opacity: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     z-index: 2;
 }
 
+.galleryDesktop .slick-arrow.slick-prev::before {
+    color: black;
+}
+
 .galleryDesktop .slick-arrow.slick-next{
-    right: 0 !important;
+    right: -3rem !important;
     width: 5rem;
     height: 97%;
     opacity: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     z-index: 2;
+}
+
+.galleryDesktop .slick-arrow.slick-next::before {
+    color: black;
 }
 
 @media (min-width: 768px) {
     .galleryDesktop .slick-list .slick-track > div {
-        width: 32.6rem !important;
+        width: 32% !important;
     }
 }
 
 @media (min-width: 1024px) {
     .galleryDesktop .slick-list .slick-track > div {
-        width: 44rem !important;
+        width: 32% !important;
     }
 
     .galleryDesktop .slick-arrow.slick-next{
@@ -83,6 +91,10 @@
 }
 
 @media (min-width: 1360px) {
+    .galleryDesktop .slick-track > div {
+        width: 32% !important;
+    }
+
     .galleryDesktop .slick-list .slick-track > div {
         width: 59.4rem !important;
     }
@@ -90,7 +102,7 @@
 
 @media (min-width: 1440px) {
     .galleryDesktop .slick-list .slick-track > div {
-        width: 75rem !important; 
+        width: 32% !important; 
         max-width: 75rem !important;
     }
 
