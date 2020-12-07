@@ -13,8 +13,8 @@ function App() {
       <Header />
       <Banner />
       <AboutUs />
-      <Gallery />
       <OurServices/>
+      <Gallery />
       <Footer />
     </>
   );

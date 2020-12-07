@@ -1,4 +1,4 @@
-import React from "react";
+import {useState, useEffect } from "react";
 import GalleryMobile from "./GalleryMobile/GalleryMobile";
 import GalleryDesktop from "./GalleryDesktop/GalleryDesktop";
 
