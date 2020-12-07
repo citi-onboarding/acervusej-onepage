@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import './Header.css';
-import './NavItems'
-import NavItems from './NavItems';
 import logo from '../../assets/Logo.png'
 
 function Header() {
@@ -32,7 +30,18 @@ function Header() {
                 </ul>
             </div>
         </div>
-        {isMenuVisible ? <NavItems /> : null}
+        <div className={isMenuVisible ? 'navOpen' : 'navClose'} >
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Quem Somos</a></li>
+                <li><a href="">Missão e Visão</a></li>
+                <li><a href="">Nossos Serviços</a></li>
+                <li><a href="">Galeria de Fotos</a></li>
+                <button id="navContact">
+                    <a href="">Fale conosco</a>
+                </button>
+            </ul>
+        </div>
     </header>
   );
 }
