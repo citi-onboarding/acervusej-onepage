@@ -4,6 +4,7 @@ import {
   Header,
   AboutUs,
   Footer,
+  Contact,
 } from './components/index';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Banner />
       <AboutUs />
       <OurServices/>
+      <Contact/>
       <Footer />
     </>
   );
