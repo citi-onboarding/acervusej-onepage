@@ -1,8 +1,8 @@
 import {
-  OurServices,
-  Banner,
   Header,
+  Banner,
   AboutUs,
+  OurServices,
   Gallery,
   Footer,
 } from './components/index';
