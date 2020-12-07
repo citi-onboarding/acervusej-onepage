@@ -44,7 +44,7 @@
 
 .inputs-contact> div>input{
     height: 19px;
-    width: 258px;
+    width: 254px;
     padding: 2px;
     background-color: var(--color-background);
     border: none;
@@ -62,7 +62,7 @@
     border: none;
     background-color: var(--color-background);
     height: 19px;
-    width: 155px;
+    width: 154px;
     font-family: TwCenMT;
     font-size: 14px;
 }
@@ -78,7 +78,7 @@
 #input-message-contact{
     height: 116px;
     resize: none;
-    width: 258px;
+    width: 253px;
     border: none;
     padding: 2px;
 }
@@ -88,7 +88,7 @@
 }
 
 .button-contact{
-    
+    cursor: pointer;
     height: 19px;
     width: 108px;
     background-color: var(--color-background);
@@ -97,6 +97,10 @@
 
 .button-contact:focus{
     outline: none;
+}
+
+.button-contact:hover{
+    opacity: 0.8;
 }
 
 
@@ -188,5 +192,5 @@
         height: 22px;
         width: 158px;
     }
-
 }
+
