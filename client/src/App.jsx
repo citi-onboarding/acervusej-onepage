@@ -1,4 +1,5 @@
 import {
+  OurServices,
   Banner,
   Header,
   AboutUs,
@@ -13,6 +14,7 @@ function App() {
       <Banner />
       <AboutUs />
       <Gallery />
+      <OurServices/>
       <Footer />
     </>
   );
