@@ -169,7 +169,7 @@
 
     .inputs-contact> div>input{
         height: 22px;
-        width: 350px;
+        width: 390px;
         padding: 4px;
     }
     
@@ -179,7 +179,7 @@
     
     #reasons-box{
         height: 22px;
-        width: 220px;
+        width: 230px;
         font-size: 16px;
     }
     
@@ -188,14 +188,14 @@
     }
     
     #input-message-contact{
-        width: 350px !important;
+        width: 390px !important;
         padding: 4px;
     }
     
     .button-contact{
-        width: 91px;
-        height: 40px;
-        font-size: 16px;
+        width: 82px;
+        height: 36px;
+        font-size: 15px;
         align-self: flex-end;
 
     }
