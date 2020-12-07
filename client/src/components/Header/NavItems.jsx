@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import './Header.css';
 
 function NavItems({}) {
@@ -18,4 +18,4 @@ function NavItems({}) {
   );
 }
 
-export default NavItems;
+export default NavItems; */

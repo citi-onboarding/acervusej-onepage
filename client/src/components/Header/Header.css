@@ -26,31 +26,68 @@ header > div > nav > a {
     margin: .7rem 0rem;
 }
 
-#navItems {
-    display: flex;
+.navOpen {
+    opacity: 1;
     background-color: #202020;
     width: 100vw;
     height: 100vh;
     justify-content: center;
     flex-direction: column;
+    right: 0;
+    transition: 0.5s all ease-in-out;
+    position: absolute;
 }
 
-#navItems ul {
-    position: fixed;
+.navOpen ul {
+    position: absolute;
     padding-top: 5.7rem;
     list-style: none;
     width: 90vw;
-    left: 3.33%;
-    top: 10%;
+    margin-left: 5%;
 }
 
-#navItems ul li {
+.navOpen ul li {
     padding: 1.6rem 0;
     margin: 0rem 1.6rem;
     border-bottom: #fff solid 1px;
 }
 
-#navItems ul li a {
+.navOpen ul li a {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navClose {
+    opacity: 0.8;
+    background-color: #202020;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    right: -105%;
+    position: absolute;
+    transition: 0.5s all ease-in-out;
+}
+
+.navClose ul {
+    position: fixed;
+    padding-top: 5.7rem;
+    list-style: none;
+    width: 90vw;
+    left: 5%;
+    right: -100%;
+    position: absolute;
+}
+
+.navClose ul li {
+    padding: 1.6rem 0;
+    margin: 0rem 1.6rem;
+    border-bottom: #fff solid 1px;
+}
+
+.navClose ul li a {
     font-size: 2rem;
     line-height: 2.5rem;
     color: #fff;
@@ -65,10 +102,10 @@ header > div > nav > a {
     border-radius: 0;
     border: none;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     right: 25%;
     left: 25%;
-    top: 90%;
+    margin-top: 33%;
 }
 
 #navContact:focus {
@@ -215,8 +252,7 @@ header > div > nav > a {
 
     #navItems1 ul li a:hover {
         transition: all ease-out 0.2s;
-        opacity: 0.4;
-        text-shadow: #000 1px 1px 1px;
+        font-weight: bold;
     }
 
     #navItems1 ul li:nth-child(1) { /* Temporário até próximas seções estarem prontas*/
