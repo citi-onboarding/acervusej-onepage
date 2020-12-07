@@ -3,6 +3,9 @@ import axios from "axios";
 import Slider from "react-slick";
 import GalleryCardDesktop from "../GalleryDesktop/GalleryCardDesktop/GalleryCardDesktop";
 
+import rightArrow from '../../../assets/right_arrow.svg';
+import leftArrow from '../../../assets/left_arrow.svg';
+
 import './GalleryDesktop.css'
 
 function GalleryDesktop() {
@@ -37,13 +40,15 @@ function GalleryDesktop() {
 
     return (
         <div className='galleryDesktop'>
-      <Slider {...settings}>
-        {galleryDesktop.posts.map((post) => (
-          <div>
-            <GalleryCardDesktop post={post} />
-          </div>
-        ))}
-      </Slider>
+          <img src={leftArrow} alt="" className="arrow" id="leftArrow"/>
+          <Slider {...settings}>
+            {galleryDesktop.posts.map((post) => (
+              <div key={post._id}>
+                <GalleryCardDesktop post={post} />
+              </div>
+            ))}
+          </Slider>
+        <img src={rightArrow} alt="" className="arrow" id="rightArrow"/>
     </div>
     );
 }

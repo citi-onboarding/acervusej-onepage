@@ -52,21 +52,16 @@
     left: -3rem;
     width: 5rem;
     height: 97%;
-    opacity: 100%;
+    opacity: 0%;
     background: transparent;
     z-index: 2;
-}
-
-.galleryDesktop .slick-arrow.slick-prev::before {
-    color: black;
 }
 
 .galleryDesktop .slick-arrow.slick-next{
     right: -3rem !important;
     width: 5rem;
     height: 97%;
-    opacity: 100%;
-    background: transparent;
+    opacity: 0%;
     z-index: 2;
 }
 
@@ -87,16 +82,6 @@
 
     .galleryDesktop .slick-arrow.slick-next{
         right: 0.5rem;
-    }
-}
-
-@media (min-width: 1360px) {
-    .galleryDesktop .slick-track > div {
-        width: 32% !important;
-    }
-
-    .galleryDesktop .slick-list .slick-track > div {
-        width: 59.4rem !important;
     }
 }
 
