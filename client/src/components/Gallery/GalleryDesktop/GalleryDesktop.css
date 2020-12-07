@@ -21,6 +21,8 @@
 .galleryDesktop .slick-track {
     height: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 .galleryDesktop .slick-list .slick-track > div {
@@ -56,7 +58,7 @@
 }
 
 .galleryDesktop .slick-arrow.slick-next{
-    right: 0;
+    right: 0 !important;
     width: 5rem;
     height: 97%;
     opacity: 100%;

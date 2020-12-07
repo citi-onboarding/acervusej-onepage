@@ -11,9 +11,10 @@ function GalleryDesktop() {
         className: "center",
         centerMode: true,
         infinite: true,
-        centerPadding: "81rem",
+        centerPadding: "0",
+        SwipeToSlide: true,
         slidesToShow: 2,
-        speed: 4000,
+        speed: 1000,
         rows: 2,
         slidesPerRow: 1,
         autoplay: true

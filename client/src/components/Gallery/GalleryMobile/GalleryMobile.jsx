@@ -12,10 +12,10 @@ function GalleryMobile() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 1000,
+    autoplaySpeed: 1000,
     vertical: true,
-    verticalSwiping: true,
+    verticalSwiping: false,
     // beforeChange: function (currentSlide, nextSlide) {
     //   console.log("before change", currentSlide, nextSlide);
     // },
