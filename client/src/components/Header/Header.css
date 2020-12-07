@@ -4,6 +4,7 @@ header {
     background-color: #fff;
     position: fixed;
     z-index: 99;
+    box-shadow: 0px 1px 8px #e0e0e0;
 }
 
 #headerContainer {
@@ -202,6 +203,20 @@ header > div > nav > a {
         color: #000;
         text-decoration: none;
         font-size: 2.2rem;
+    }
+
+    #navItems1 ul li a {
+        line-height: 2.6rem;
+        color: #000;
+        text-decoration: none;
+        font-size: 2.2rem;
+        transition: all ease-in 0.4s;
+    }
+
+    #navItems1 ul li a:hover {
+        transition: all ease-out 0.2s;
+        opacity: 0.4;
+        text-shadow: #000 1px 1px 1px;
     }
 
     #navItems1 ul li:nth-child(1) { /* Temporário até próximas seções estarem prontas*/
