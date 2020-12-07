@@ -5,10 +5,10 @@ import GalleryDesktop from "./GalleryDesktop/GalleryDesktop";
 import "./Gallery.css";
 
 function Gallery() {
-  const[width, setWidth] = React.useState(window.innerWidth);
+  const[width, setWidth] = useState(window.innerWidth);
   const breakpoint = 768;
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('resize', () => setWidth(window.innerWidth));
   }, [])
 
