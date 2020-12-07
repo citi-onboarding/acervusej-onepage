@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import './Header.css';
-import './NavItems'
-/* import NavItems from './NavItems'; */
 import logo from '../../assets/Logo.png'
 
 function Header() {
@@ -44,7 +42,6 @@ function Header() {
                 </button>
             </ul>
         </div>
-        {/* {isMenuVisible ? <NavItems /> : null} */}
     </header>
   );
 }
