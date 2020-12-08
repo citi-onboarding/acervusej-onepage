@@ -16,7 +16,6 @@
 .galleryDesktop .slick-list {
     height: 100%;
     padding: 0 !important;
-    overflow: hidden;
 }
 .galleryDesktop .slick-track {
     height: 100%;

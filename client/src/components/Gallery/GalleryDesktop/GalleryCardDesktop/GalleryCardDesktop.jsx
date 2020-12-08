@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import DesktopModal from './DesktopModal'
+import React, {useState, createRef} from "react";
+import DesktopModal from '../../DesktopModal'
 
 import './GalleryCardDesktop.css';
 
@@ -9,21 +9,18 @@ function GalleryCardDesktop({ post }) {
   const [isModalVisible, setModalVisible] = useState(false);
 
   function Modal() {
-    <DesktopModal post={post} state={isModalVisible}/>
+    const title = post?.title
+    console.log(title)
   }
 
   function closeModal() {
     setModalVisible(false);
     console.log(isModalVisible)
   }
-    
-
-    
-
-
 
   return (
-      <div className='cardDesktop' key={post?._id} onClick={Modal}>
+    <button onClick={Modal}>
+      <div className='cardDesktop' key={post?._id}>
         <div className="gallery-image">
           <img src={post?.image?.secure_url} alt={post?.title} />
         </div>
@@ -31,6 +28,7 @@ function GalleryCardDesktop({ post }) {
           <h3>{post?.title}</h3>
         </div>
       </div>
+      </button>
   );
 }
 

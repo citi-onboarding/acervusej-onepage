@@ -44,7 +44,7 @@ function GalleryDesktop() {
           <Slider {...settings}>
             {galleryDesktop.posts.map((post) => (
               <div key={post._id}>
-                <GalleryCardDesktop post={post} />
+                  <GalleryCardDesktop post={post} />
               </div>
             ))}
           </Slider>

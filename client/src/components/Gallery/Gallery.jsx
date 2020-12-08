@@ -1,6 +1,7 @@
 import {useState, useEffect } from "react";
 import GalleryMobile from "./GalleryMobile/GalleryMobile";
 import GalleryDesktop from "./GalleryDesktop/GalleryDesktop";
+import DesktopModal from "./DesktopModal"
 
 import "./Gallery.css";
 
@@ -12,9 +13,9 @@ function Gallery() {
     window.addEventListener('resize', () => setWidth(window.innerWidth));
   }, [])
 
-
   return (
-    <div className="gallery">
+    <div className="gallery" id="gallery">
+      <DesktopModal/>
       <div className="container">
         <div className="content">
           <div className="gallery-section-title">
