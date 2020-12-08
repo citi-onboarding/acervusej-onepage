@@ -24,7 +24,7 @@ function OurServices() {
       infinite: true,
       centerPadding: "70px",
       slidesToShow: 1,
-      speed: 500
+      speed: 1000
   };
 
   return (
