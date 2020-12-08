@@ -28,7 +28,7 @@ function OurServices() {
   };
 
   return (
-    <div className="all-services">
+    <div className="all-services" id="services">
       <h1 className = "title-our-services">Nossos Serviços</h1>
       <Slider {...settings}>
         {services?.map(({ _id, image ,title, description}) =>(

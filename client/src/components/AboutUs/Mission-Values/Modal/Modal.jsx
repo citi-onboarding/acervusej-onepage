@@ -26,7 +26,7 @@ function Modal({ mission, values }) {
     }
     
     return (
-        <div className="mission-values">
+        <div className="mission-values" id="missionValue">
             <div className="buttons">
                 <button className="mission-button" onClick={toggleShowMissionText}>Missão</button>
                 <button className="values-button" onClick={toggleShowValuesText}>Valores</button>
