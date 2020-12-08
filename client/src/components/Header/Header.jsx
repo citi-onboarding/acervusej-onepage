@@ -39,12 +39,12 @@ function Header() {
         </div>
         <div className={isMenuVisible ? 'navOpen' : 'navClose'} >
             <ul>
-                <li><a href="#root">Home</a></li>
-                <li><a href="#contentAboutUs">Quem Somos</a></li>
-                <li><a href="#missionValue">Missão e Visão</a></li>
-                <li><a href="#services">Nossos Serviços</a></li>
-                <li><a href="#gallery">Galeria de Fotos</a></li>
-                <button id="navContact">
+                <li><a href="#root" onClick={toggleMenu}>Home</a></li>
+                <li><a href="#contentAboutUs" onClick={toggleMenu}>Quem Somos</a></li>
+                <li><a href="#missionValue" onClick={toggleMenu}>Missão e Visão</a></li>
+                <li><a href="#services" onClick={toggleMenu}>Nossos Serviços</a></li>
+                <li><a href="#gallery" onClick={toggleMenu}>Galeria de Fotos</a></li>
+                <button id="navContact" onClick={toggleMenu}>
                     <a href="#contact">Fale conosco</a>
                 </button>
             </ul>
