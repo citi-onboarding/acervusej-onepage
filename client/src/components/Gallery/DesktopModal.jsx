@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import './DesktopModal.css'
 
 function DesktopModal({infos, state}) {
@@ -18,7 +18,8 @@ function DesktopModal({infos, state}) {
     //       <p>{post?.description}</p>
     //   </div>
     // </div>
-    <></>
+    <>
+    </>
   );
 }
 
