@@ -7,6 +7,13 @@ function Header() {
 
     function toggleMenu() {
         setMenuVisible(!isMenuVisible);
+
+        if (isMenuVisible === true) {
+            document.querySelector('body').style.overflow = "auto";
+            console.log('Hello World')
+        } else {
+            document.querySelector('body').style.overflow = "hidden";
+        }
     }
 
   return (
