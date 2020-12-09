@@ -14,7 +14,7 @@ function Gallery() {
 
 
   return (
-    <div className="gallery">
+    <div className="gallery" id="gallery">
       <div className="container">
         <div className="content">
           <div className="gallery-section-title">
