@@ -63,4 +63,8 @@ h1, h2{
         font-size: 62.5%;
     }
 
+    html {
+        scroll-padding-top: 11rem;
+    }
+
 }
