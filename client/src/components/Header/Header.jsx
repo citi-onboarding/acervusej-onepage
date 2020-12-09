@@ -16,6 +16,46 @@ function Header() {
         }
     }
 
+    window.addEventListener('scroll', function() { 
+        let scrollPosition = Math.round(window.scrollY);
+        console.log(scrollPosition) 
+
+        if (window.scrollY >= 0 && window.scrollY < 546) {
+            document.querySelector('#navItems1 ul li:nth-child(1)').classList.add("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(3)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
+
+        } if (window.scrollY > 546 && window.scrollY < 1777) {
+            document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(3)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(2)').classList.add("linkBorder");
+        } if (window.scrollY > 1777 && window.scrollY < 2427) {
+            document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(3)').classList.add("linkBorder");
+
+        } if (window.scrollY > 2427  && window.scrollY < 3166) {
+            document.querySelector('#navItems1 ul li:nth-child(3)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(4)').classList.add("linkBorder");
+
+        } if (window.scrollY > 3166) {
+            document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(3)').classList.remove("linkBorder");
+            document.querySelector('#navItems1 ul li:nth-child(5)').classList.add("linkBorder");
+        }
+      });
+
   return (
     <header>
         <div className="container" id="headerContainer">
@@ -29,7 +69,7 @@ function Header() {
             </nav>
             <div id="navItems1">
                 <ul>
-                    <li><a href="#root">Home</a></li>
+                    <li className="linkBorder"><a href="#root">Home</a></li>
                     <li><a href="#contentAboutUs">A Acervus</a></li>
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#gallery">Galeria</a></li>
