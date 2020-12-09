@@ -27,27 +27,27 @@ function Header() {
             document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
 
-        } if (window.scrollY > 546 && window.scrollY < 1777) {
+        } if (window.scrollY > 546 && window.scrollY < 1663) {
             document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(3)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(2)').classList.add("linkBorder");
-        } if (window.scrollY > 1777 && window.scrollY < 2427) {
+        } if (window.scrollY > 1663 && window.scrollY < 2313) {
             document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(3)').classList.add("linkBorder");
 
-        } if (window.scrollY > 2427  && window.scrollY < 3166) {
+        } if (window.scrollY > 2313  && window.scrollY < 3051) {
             document.querySelector('#navItems1 ul li:nth-child(3)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(4)').classList.add("linkBorder");
 
-        } if (window.scrollY > 3166) {
+        } if (window.scrollY > 3051) {
             document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
