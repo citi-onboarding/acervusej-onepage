@@ -1,0 +1,127 @@
+.modalClosed>*{
+    transition: 1s all ease-in-out;
+    display: none;
+    width:0;
+    height: 0;
+}
+
+.modalOpened{
+    position: absolute;
+    z-index: 2;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    transition: 0.7s all ease-in-out;
+}
+
+
+
+.modalOpened .backgroundModal{
+    width: 80%;
+    height: 90%;
+    background-color: var( --color-background);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.modalOpened .informationsModal{
+    width: 100%;
+    height:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalOpened .buttonModal{
+    width: 25px;
+    margin-top: 25px;
+    margin-right: 10px;
+    transform: rotate(45deg); 
+    height: 2px;
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+}
+
+.modalOpened .buttonModal:before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    transform: rotate(90deg); 
+    top:18%;
+    background-color: #000000;
+    position: absolute;
+}
+
+.modalOpened .buttonModal:focus{
+    outline: none;
+}
+
+.modalOpened .imgModal{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.modalOpened  .titleModal{
+    width: 70% ;
+    overflow-y: auto;
+    font-size: 17px;
+    text-align: center;
+}
+
+.modalOpened .descModal{
+    width: 90% ;
+    max-height: 50%;
+    min-height: 50%;
+    overflow-y: auto;
+    font-size: 14px;
+    text-align: justify;
+}
+
+@media (min-width: 600px){
+   
+        
+    .modalOpened .imgModal{
+        width: 250px;
+        height: 250px;
+    }
+
+    .modalOpened  .titleModal{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 860px){
+    .modalOpened .imgModal{
+        width: 273px;
+        height: 250px;
+    }
+
+    .modalOpened  .titleModal{
+        font-size: 22px;
+    }
+
+    .modalOpened .backgroundModal{
+        width: 800px;
+        height: 500px;
+    }
+
+    .modalOpened .descModal{
+        max-height: 30%;
+        min-height: 30%;
+        font-size: 14px;
+    }
+
+
+    @media (min-width: px){
+
+    }
+}
