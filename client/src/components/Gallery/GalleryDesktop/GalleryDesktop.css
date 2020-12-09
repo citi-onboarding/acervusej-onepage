@@ -85,7 +85,7 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
     .galleryDesktop .slick-list .slick-track > div {
         width: 32% !important; 
         max-width: 75rem !important;
