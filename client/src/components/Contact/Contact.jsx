@@ -1,17 +1,37 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useReducer } from 'react';
 import './Contact.css';
 import logo from '../../assets/Logo-contact.png'
 import axios from 'axios';
 
-function Contact (){
 
+const initialState = {
+    name: '',
+    email: '',
+    subject: '',
+    phoneNumber : '',
+    message: '',
+    reason: ''
+};
+
+const reducer = (state, action) => {
+    if (action.type === "reset") {
+      return initialState;
+    }
+    const result = { ...state };
+    result[action.field] = action.value;
+    return result;
+};
+
+function Contact (){
+    const [state, dispatch] = useReducer(reducer, initialState);
+    const { name, email, subject, phoneNumber, message, reason } = state;
     const [contactReasons, getReason] = useState([]);
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [message, setMessage] = useState('');
-    const [reason, setReason] = useState('');
     const [sendMessage, setSendMessage] = useState('Enviar');
+  
+    const handleChange = (e) => {
+    dispatch({ field: e.target.name, value: e.target.value });
+  };
+
 
     const loadReasons = async () => {
     const res = await axios.get('http://localhost:3001/api/contact-reasons');
@@ -22,29 +42,18 @@ function Contact (){
         loadReasons();
     }, []);
     
-    const handleSubmit = async (event) => {
+    const sendEmail = async (event) => {
         try {
           event.preventDefault();
-          let subject = name;
+          state.subject = state.name
           setSendMessage('Enviando...')
-          await axios.post('http://localhost:3001/api/send-email', {
-            name,
-            email,
-            phoneNumber,
-            subject,
-            message,
-            reason
-          });
+          await axios.post('http://localhost:3001/api/send-email', state);
           
           console.log('Email enviado com sucesso!');
         } catch (err) {
             alert('Email não enviado')
-          console.log(err?.response || err);
         }
-        setName('');
-        setEmail('');
-        setPhoneNumber('');
-        setMessage('');
+        dispatch({ type: "reset" });
         setSendMessage('Enviar');
     };
 
@@ -58,7 +67,7 @@ function Contact (){
                         <h1 className = "contact-title">Converse Conosco!</h1>
                         <p className = "contact-desc">Envie um email ou ligue para nós, vamos entrar em contato.</p>
                     </div>
-                    <form  onSubmit={handleSubmit} className = "inputs-contact">
+                    <form  onSubmit={sendEmail} className = "inputs-contact">
                         <div>
                             <p>Nome</p>
                             <input 
@@ -66,7 +75,7 @@ function Contact (){
                                 required 
                                 name="name"
                                 value={name}
-                                onChange={(e) => setName(e.target.value)}
+                                onChange={handleChange}
                             ></input>
                         </div>
                         <div>
@@ -76,7 +85,7 @@ function Contact (){
                                 required
                                 name="email"
                                 value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                onChange={handleChange}
                             ></input>
                         </div>
                         <div>
@@ -84,14 +93,14 @@ function Contact (){
                             <input id= "input-number-contact"
                                 required
                                 placeholder = "(DDD) 99999-9999"
-                                name="subject"
+                                name="phoneNumber"
                                 value={phoneNumber}
-                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                onChange={handleChange}
                                 ></input>
                         </div>
                         <div>
                             <p>Motivo</p>
-                            <select id="reasons-box" onChange = {(e) => setReason(e.target.value)} >
+                            <select id="reasons-box" value = {reason} name= "reason" onChange = {handleChange} >
                                 <option value = ''>Escolha o motivo</option>
                                 {contactReasons.map(({ _id, reason }) => (<option key = {_id} >{reason}</option>))}
                             </select>
@@ -103,7 +112,7 @@ function Contact (){
                                 placeholder = "Digite sua mensagem para a Acervus"
                                 name="message"
                                 value={message}
-                                onChange={(e) => setMessage(e.target.value)}>
+                                onChange={handleChange}>
                             </textarea>
                         </div>
                         <button className = "button-contact" type = "submit" >{sendMessage} </button>
