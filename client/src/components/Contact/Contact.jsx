@@ -104,7 +104,7 @@ function Contact (){
                         </div>
                         <div>
                             <p>Motivo</p>
-                            <select id="reasons-box" value = {reason} name= "reason" onChange = {handleChange} >
+                            <select id="reasons-box" value = {reason} required name= "reason" onChange = {handleChange} >
                                 <option value = ''>Escolha o motivo</option>
                                 {contactReasons.map(({ _id, reason }) => (<option key = {_id} >{reason}</option>))}
                             </select>
