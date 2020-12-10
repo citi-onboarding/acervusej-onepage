@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .gallery-section-title {
@@ -10,9 +11,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 0.25rem solid #000000;
+    /* border-bottom: 0.25rem solid #000000; */
     margin: 3rem 0;
-    font-size: 3rem;
+}
+
+.gallery-section-title h1 {
+    font-size: 4.4rem;
+}
+
+.gallery-section-title:after {
+    content: "";
+    position: absolute;
+    height: 4rem;
+    width: 12.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.3rem solid black;
 }
 
 .carousel {

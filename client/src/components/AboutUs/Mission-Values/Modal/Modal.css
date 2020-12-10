@@ -54,6 +54,18 @@
     justify-content: space-evenly;
 }
 
+.active-button {
+    color: #000000;
+    border-bottom: 0.25rem solid #000000;
+    transition: 0.2s all ease-in-out;
+}
+
+.sleep-button {
+    color: #ababab;
+    border: none;
+    transition: 0.2s all ease-in-out;
+}
+
 @media (min-width: 520px) {
     .mission-values {
         width: 100%;
@@ -79,11 +91,13 @@
 
 @media (min-width: 1440px) {
     .mission-button {
-        font-size: 2.4rem;
-        width: 12;
+        font-size: 3.2rem;
+        width: auto;
+        height: auto;
     }
     .values-button {
-        font-size: 2.4rem;
-        width: 12;
+        font-size: 3.2rem;
+        width: auto;
+        height: auto;
     }
 }

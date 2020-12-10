@@ -17,7 +17,7 @@ function Contact (){
     }, []);
 
     return(
-        <div className = "contact-box">
+        <div className = "contact-box" id="contact">
             <div className = "container">
                 <img className= "contact-logo" src = {logo} alt="" ></img>
                 <div className= "right-contact">
