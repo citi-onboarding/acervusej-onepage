@@ -15,7 +15,6 @@ function Modal({image, title, desc, modalServiceVisible, func}){
             </div>
         </div>
     )
-    
 }
 
 export default Modal;
