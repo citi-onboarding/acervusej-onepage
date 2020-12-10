@@ -12,13 +12,14 @@ module.exports = async ({
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.EMAIL,
-            pass: process.env.PASSWORD,
+            user: process.env.EMAIL_ACERVUS,
+            pass: process.env.PASSWORD_ACERVUS,
         },
+        tls : { rejectUnauthorized: false }
     });
 
     await transporter.sendMail({
-        from: process.env.EMAIL,
+        from: process.env.EMAIL_ACERVUS,
         to: destinationUser,
         subject: subjectText,
         html: htmlOption,
