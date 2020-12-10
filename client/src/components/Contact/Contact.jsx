@@ -96,8 +96,8 @@ function Contact (){
                                 required
                                 placeholder = "(DDD) 99999-9999"
                                 name="phoneNumber"
-                                minLength = "8"
-                                pattern = "[ 0-9\(\)-]{7,16}$"
+                                minLength = "10"
+                                pattern = "[ 0-9\(\)-]{10,16}$"
                                 value={phoneNumber}
                                 onChange={handleChange}
                                 ></input>
