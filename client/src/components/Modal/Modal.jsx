@@ -8,9 +8,19 @@ function Modal({image, title, desc, modalServiceVisible, func}){
             <div className = "backgroundModal">
                 <button className = "buttonModal" onClick = {() => func()}></button>
                 <div className = "informationsModal">
-                    <img src = {image} className = "imgModal"/>
-                    <h1 className = "titleModal">{title}</h1>
-                    <p className= "descModal">{desc}</p>
+                    <div className="imagesModal">
+                    <div className="imageModal">
+                        <img src = {image}/>
+                    </div>
+                    </div>
+                    <div className="modalText">
+                    <div className="titleModal">
+                        <h1>{title}</h1>
+                    </div>
+                    <div className="descModal">
+                        <p>{desc}</p>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

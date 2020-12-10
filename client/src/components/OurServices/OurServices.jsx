@@ -39,23 +39,27 @@ function OurServices() {
     setTitleSrc(title);
     setDescSrc(desc);
     setModalServiceVisible(!modalServiceVisible);
+    const body = document.querySelector('body');
+    body.style.overflow = 'hidden';
   }
 
   const closeModal = () =>{
     setModalServiceVisible(false)
+    const body = document.querySelector('body');
+    body.style.overflow = 'visible';
   }
 
   return (
     <div className="all-services">
-      <Modal image = {imgSrc} title = {titleSrc} desc ={descSrc} modalServiceVisible ={modalServiceVisible} func={closeModal}/>
       <h1 className = "title-our-services">Nossos Serviços</h1>
       <Slider {...settings}>
         {services?.map(({ _id, image ,title, description}) =>(
-          <div key={_id} className="service-card" onClick= {() => openModal(image[0].secure_url, title, description)}>
+          <div key={_id} className="service-card" onClick= {() => openModal(image[0].secure_url, title, description)} >
             <Service  image = {image[0].secure_url} title= {title} desc = {description}/>
           </div>
         ))}
       </Slider>
+     <Modal image = {imgSrc} title = {titleSrc} desc ={descSrc} modalServiceVisible ={modalServiceVisible} func={closeModal}/>
     </div>
   );
 }

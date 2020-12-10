@@ -6,29 +6,35 @@
 }
 
 .modalOpened{
-    position: absolute;
+    position: fixed;
     z-index: 10000000;
-    background-color: #e5e5e5;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     transition: 0.7s all ease-in-out;
+    top: 0;
+    left: 0;
 }
 
 .modalOpened .backgroundModal{
+    position: relative;
     width: 80%;
-    height: 90%;
+    height: 70%;
     background-color: var( --color-background);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    border-radius: 5px;
 }
 
 .modalOpened .informationsModal{
+    position: absolute;
     width: 100%;
-    height:90%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,14 +42,15 @@
 }
 
 .modalOpened .buttonModal{
-    width: 25px;
-    margin-top: 25px;
+    width: 15px;
+    margin-top: 20px;
     margin-right: 10px;
     transform: rotate(45deg); 
     height: 2px;
     background-color: #000000;
     border: none;
     cursor: pointer;
+    z-index: 3000000;
 }
 
 .modalOpened .buttonModal:before{
@@ -55,71 +62,107 @@
     top:18%;
     background-color: #000000;
     position: absolute;
+    z-index: 3000000;
 }
 
 .modalOpened .buttonModal:focus{
     outline: none;
 }
 
-.modalOpened .imgModal{
-    width: 150px;
-    height: 150px;
+.modalOpened .modalText {
+    height: 50%;
+}
+.modalOpened .imagesModal {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalOpened .imageModal{
+    width: 70%;
+    height: 70%;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modalOpened .imageModal img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    margin-top: 20px;
 }
 
 .modalOpened  .titleModal{
-    width: 70% ;
-    overflow-y: auto;
-    font-size: 17px;
+    font-size: 3.8vw !important;
     text-align: center;
+    height: auto;
+    margin-bottom: 2rem;
+    font-size: 3.8vw;
 }
 
 .modalOpened .descModal{
-    width: 90% ;
-    max-height: 50%;
-    min-height: 50%;
+    width: auto;
+    height: 15rem;
     overflow-y: auto;
     font-size: 14px;
     text-align: justify;
+    padding: 0 1rem;
+    margin:0 2rem;
+    font-size:3.2vw !important;
 }
 
-@media (min-width: 600px){
-   
-        
-    .modalOpened .imgModal{
-        width: 250px;
-        height: 250px;
+@media (min-width:500px){
+    .modalOpened .titleModal h1{
+        font-size: 3.2vw !important;
     }
-
-    .modalOpened  .titleModal{
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 860px){
-    .modalOpened .imgModal{
-        width: 273px;
-        height: 250px;
-    }
-
-    .modalOpened  .titleModal{
-        font-size: 22px;
-    }
-
-    .modalOpened .backgroundModal{
-        width: 800px;
-        height: 500px;
-    }
-
     .modalOpened .descModal{
-        max-height: 30%;
-        min-height: 30%;
-        font-size: 14px;
+        font-size: 2.7vw !important;
     }
+}
 
+@media (min-height: 768px){
+    .modalOpened .backgroundModal{
+        max-height: 540px !important;
+    }
+    .modalOpened .imagesModal{
+        height: 60%;
+    }
+}
 
-    @media (min-width: px){
+@media (min-width: 769px){
+    .modalOpened .imageModal {
+        max-height: 300px;
+    }
+    .modalOpened .titleModal h1{
+        font-size: 18px !important;
+    }
+    .modalOpened .descModal{
+        font-size: 15px;
+        padding: 0 3rem;
+    }
+}
 
+@media (min-width: 1024px){
+    .modalOpened .descModal{
+        font-size: 15.5px !important;
+    }
+    .modalOpened .titleModal{
+        font-size: 18px !important;
+    }
+}
+
+@media(min-width: 1440px) {
+    .modalOpened .backgroundModal {
+        width: 1152px;
+    }
+    .modalOpened .titleModal{
+        font-size: 30px;
+    }
+    .modalOpened .descModal{
+        font-size: 22px;
     }
 }
