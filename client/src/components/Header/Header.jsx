@@ -17,9 +17,6 @@ function Header() {
     }
 
     window.addEventListener('scroll', function() { 
-        let scrollPosition = Math.round(window.scrollY);
-        console.log(scrollPosition) 
-
         if (window.scrollY >= 0 && window.scrollY < 546) {
             document.querySelector('#navItems1 ul li:nth-child(1)').classList.add("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
