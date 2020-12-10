@@ -150,7 +150,7 @@
 
 @media (min-width:1025px){
     .contact-box{
-        height: 600px;
+        height: 700px;
     }
     .contact-box >.container{
         height: 600px;
@@ -162,7 +162,8 @@
     }
      
     .right-contact{
-        height:600px;
+        height:100%;
+        margin: 3rem 0;
     }
 
     .inputs-contact{

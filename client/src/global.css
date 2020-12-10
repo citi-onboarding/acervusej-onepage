@@ -18,6 +18,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: 10%;
+}
+
 html,
 body,
 #root {

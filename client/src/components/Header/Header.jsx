@@ -27,27 +27,27 @@ function Header() {
             document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
 
-        } if (window.scrollY > 546 && window.scrollY < 1663) {
+        } if (window.scrollY > 546 && window.scrollY < 1680) {
             document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(3)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(2)').classList.add("linkBorder");
-        } if (window.scrollY > 1663 && window.scrollY < 2313) {
+        } if (window.scrollY > 1680 && window.scrollY < 2300) {
             document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(3)').classList.add("linkBorder");
 
-        } if (window.scrollY > 2313  && window.scrollY < 3051) {
+        } if (window.scrollY > 2300  && window.scrollY < 3130) {
             document.querySelector('#navItems1 ul li:nth-child(3)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(5)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(4)').classList.add("linkBorder");
 
-        } if (window.scrollY > 3051) {
+        } if (window.scrollY > 3130) {
             document.querySelector('#navItems1 ul li:nth-child(4)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(1)').classList.remove("linkBorder");
             document.querySelector('#navItems1 ul li:nth-child(2)').classList.remove("linkBorder");
@@ -60,7 +60,7 @@ function Header() {
     <header>
         <div className="container" id="headerContainer">
             <nav>
-                <a href=""><img src={logo} alt="" id="navLogo" /></a>
+                <a href="#root"><img src={logo} alt="" id="navLogo" /></a>
                 <div className={isMenuVisible ? 'menuClose' : 'menuButton'} onClick={toggleMenu}>
                     <span></span>
                     <span></span>
