@@ -43,18 +43,20 @@ function Contact (){
     }, []);
     
     const sendEmail = async (event) => {
-        try {
-          event.preventDefault();
-          state.subject = state.name
-          setSendMessage('Enviando...')
-          await axios.post('http://localhost:3001/api/send-email', state);
-          
-          console.log('Email enviado com sucesso!');
-        } catch (err) {
-            alert('Email não enviado')
-        }
-        dispatch({ type: "reset" });
-        setSendMessage('Enviar');
+        event.preventDefault();
+        if(sendMessage !== 'Enviando...'){
+            try {
+            state.subject = state.name
+            setSendMessage('Enviando...')
+            await axios.post('http://localhost:3001/api/send-email', state);
+            
+            console.log('Email enviado com sucesso!');
+            } catch (err) {
+                alert('Email não enviado')
+            }
+            dispatch({ type: "reset" });
+            setSendMessage('Enviar');
+        } 
     };
 
 
@@ -94,6 +96,8 @@ function Contact (){
                                 required
                                 placeholder = "(DDD) 99999-9999"
                                 name="phoneNumber"
+                                minLength = "8"
+                                pattern = "[ 0-9\(\)-]{7,16}$"
                                 value={phoneNumber}
                                 onChange={handleChange}
                                 ></input>
