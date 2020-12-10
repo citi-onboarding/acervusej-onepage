@@ -44,6 +44,7 @@
 }
 
 .inputs-contact> div>input{
+    font-size: 12px;
     height: 19px;
     width: 254px;
     padding: 2px;
@@ -57,6 +58,7 @@
 
 #input-number-contact{
     width: 86px;
+    font-size: 10px;
 }
 
 #reasons-box{
@@ -77,6 +79,7 @@
     width: 253px;
     border: none;
     padding: 2px;
+    font-size: 12px;
 }
 
 #input-message-contact:focus{

@@ -9,9 +9,9 @@ function Contact (){
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [number, setNumber] = useState('');
-    const [subject, setSubject] = useState('contactReasons[0].reason');
     const [message, setMessage] = useState('');
-
+    const [reason, setReason] = useState('');
+    const [sendMessage, setSendMessage] = useState('Enviar');
 
     const loadReasons = async () => {
     const res = await axios.get('http://localhost:3001/api/contact-reasons');
@@ -25,13 +25,15 @@ function Contact (){
     const handleSubmit = async (event) => {
         try {
           event.preventDefault();
-    
+          let subject = name;
+          setSendMessage('Enviando...')
           await axios.post('http://localhost:3001/api/send-email', {
             name,
             email,
             number,
             subject,
             message,
+            reason
           });
           
           console.log('Email enviado com sucesso!');
@@ -42,8 +44,8 @@ function Contact (){
         setName('');
         setEmail('');
         setNumber('');
-        setSubject('');
         setMessage('');
+        setSendMessage('Enviar');
     };
 
 
@@ -60,6 +62,7 @@ function Contact (){
                         <div>
                             <p>Nome</p>
                             <input 
+                                placeholder = "Digite seu nome"
                                 required 
                                 name="name"
                                 value={name}
@@ -69,6 +72,7 @@ function Contact (){
                         <div>
                             <p>E-mail</p>
                             <input type = "email" 
+                                placeholder = "exemplo@gmail.com"
                                 required
                                 name="email"
                                 value={email}
@@ -79,6 +83,7 @@ function Contact (){
                             <p>Número</p>
                             <input id= "input-number-contact"
                                 required
+                                placeholder = "(DDD) 99999-9999"
                                 name="subject"
                                 value={number}
                                 onChange={(e) => setNumber(e.target.value)}
@@ -86,7 +91,8 @@ function Contact (){
                         </div>
                         <div>
                             <p>Motivo</p>
-                            <select id="reasons-box" onChange = {(e) => setSubject(e.target.value)} >
+                            <select id="reasons-box" onChange = {(e) => setReason(e.target.value)} >
+                                <option value = ''>Escolha o motivo</option>
                                 {contactReasons.map(({ _id, reason }) => (<option key = {_id} >{reason}</option>))}
                             </select>
                         </div>
@@ -94,12 +100,13 @@ function Contact (){
                             <p>Mensagem</p>
                             <textarea id = "input-message-contact"
                                 required
+                                placeholder = "Digite sua mensagem para a Acervus"
                                 name="message"
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}>
                             </textarea>
                         </div>
-                        <button className = "button-contact" type = "submit" >Enviar</button>
+                        <button className = "button-contact" type = "submit" >{sendMessage}</button>
                     </form>
                 </div>
             </div>
