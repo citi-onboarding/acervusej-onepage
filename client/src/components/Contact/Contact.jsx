@@ -8,7 +8,7 @@ function Contact (){
     const [contactReasons, getReason] = useState([]);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [number, setNumber] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [message, setMessage] = useState('');
     const [reason, setReason] = useState('');
     const [sendMessage, setSendMessage] = useState('Enviar');
@@ -30,7 +30,7 @@ function Contact (){
           await axios.post('http://localhost:3001/api/send-email', {
             name,
             email,
-            number,
+            phoneNumber,
             subject,
             message,
             reason
@@ -43,7 +43,7 @@ function Contact (){
         }
         setName('');
         setEmail('');
-        setNumber('');
+        setPhoneNumber('');
         setMessage('');
         setSendMessage('Enviar');
     };
@@ -85,8 +85,8 @@ function Contact (){
                                 required
                                 placeholder = "(DDD) 99999-9999"
                                 name="subject"
-                                value={number}
-                                onChange={(e) => setNumber(e.target.value)}
+                                value={phoneNumber}
+                                onChange={(e) => setPhoneNumber(e.target.value)}
                                 ></input>
                         </div>
                         <div>
@@ -106,7 +106,7 @@ function Contact (){
                                 onChange={(e) => setMessage(e.target.value)}>
                             </textarea>
                         </div>
-                        <button className = "button-contact" type = "submit" >{sendMessage}</button>
+                        <button className = "button-contact" type = "submit" >{sendMessage} </button>
                     </form>
                 </div>
             </div>
