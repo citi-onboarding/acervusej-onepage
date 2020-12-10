@@ -42,6 +42,10 @@ section.mainBanner {
         display: block;
         width: 2rem !important;
     }
+
+    section.mainBanner {
+        max-width: 1440px;
+    }
     
     #leftArrow {
         left: 11%;

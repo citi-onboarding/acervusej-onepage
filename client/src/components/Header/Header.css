@@ -253,8 +253,9 @@ header > div > nav > a {
         font-weight: bold;
     }
 
-    #navItems1 ul li:nth-child(1) { /* Temporário até próximas seções estarem prontas*/
+    .linkBorder { /* Temporário até próximas seções estarem prontas*/
         border-bottom: 0.4rem solid #000;
+        transition: 0.2s all;
     }
 
     #navLogo {

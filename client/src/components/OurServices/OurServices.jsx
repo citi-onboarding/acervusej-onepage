@@ -25,7 +25,7 @@ function OurServices() {
       infinite: true,
       centerPadding: "70px",
       slidesToShow: 1,
-      speed: 500
+      speed: 1000
   };
 
   const [modalServiceVisible, setModalServiceVisible] = useState(false);
@@ -50,7 +50,7 @@ function OurServices() {
   }
 
   return (
-    <div className="all-services">
+    <div className="all-services" id="services">
       <h1 className = "title-our-services">Nossos Serviços</h1>
       <Slider {...settings}>
         {services?.map(({ _id, image ,title, description}) =>(

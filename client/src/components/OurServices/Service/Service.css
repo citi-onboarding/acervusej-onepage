@@ -148,11 +148,11 @@
     
     .title-service{
         width: 70%;  
-        font-size: 30px;
+        font-size: 3.6rem;
     }
     
     .desc-service{
-        font-size:22px;
+        font-size: 1.8rem;
         max-height: 100px !important;
         min-height: 50px;
     }
