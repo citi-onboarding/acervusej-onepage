@@ -13,7 +13,7 @@ const sendMail = async (req, res, next) => {
         Mensagem: ${message}`;
 
         await mailServer({
-            destinationUser: process.env.EMAIL,
+            destinationUser: process.env.EMAIL_ACERVUS,
             subjectText: subject,
             textOption: body,
         });
