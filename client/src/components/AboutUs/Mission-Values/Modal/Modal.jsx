@@ -10,26 +10,18 @@ function Modal({ mission, values }) {
         setChange(false);
         document.querySelector('.mission').style.display = 'block';
         document.querySelector('.values').style.display = 'none';
-        document.querySelector('.values-button').style.borderBottom = 'none';
-        document.querySelector('.values-button').style.color = '#ababab';
-        document.querySelector('.mission-button').style.borderBottom = '0.25rem solid #000000';
-        document.querySelector('.mission-button').style.color = '#000000';
     }
     function toggleShowValuesText() {
         setChange(true);
         document.querySelector('.mission').style.display = 'none';
         document.querySelector('.values').style.display = 'flex';
-        document.querySelector('.values-button').style.borderBottom = '0.25rem solid #000000';
-        document.querySelector('.values-button').style.color = '#000000';
-        document.querySelector('.mission-button').style.borderBottom = 'none';
-        document.querySelector('.mission-button').style.color = '#ababab';
     }
     
     return (
-        <div className="mission-values">
+        <div className="mission-values" id="missionValue">
             <div className="buttons">
-                <button className="mission-button" onClick={toggleShowMissionText}>Missão</button>
-                <button className="values-button" onClick={toggleShowValuesText}>Valores</button>
+                <button className={change ? 'mission-button sleep-button' : 'mission-button active-button'} onClick={toggleShowMissionText}>Missão</button>
+                <button className={change ? 'values-button active-button' : 'values-button sleep-button'} onClick={toggleShowValuesText}>Valores</button>
             </div>
 
             <div className="modal">

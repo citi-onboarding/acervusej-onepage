@@ -3,14 +3,14 @@
 .all-services{
     margin-bottom: 30px;
     padding: 0px !important;
-    margin: 0px !important;
+    margin: 5rem 0 0 0;
 }
 
 .title-our-services{
     display: flex;
     justify-content: center;
     margin-bottom: 9vw;
-    font-size:3rem;
+    font-size: 4.4rem;
 }
 
 .all-services > .slick-slider.center.slick-initialized{
@@ -100,7 +100,8 @@
         content: "";
         position: absolute;
         height  : 4rem;
-        width   : 10rem; 
+        width   : 12.8rem; 
+        padding-bottom: 1rem;
         border-bottom: 0.3rem solid black;
     }
 
@@ -162,11 +163,11 @@
     }
 
     .all-services > .slick-slider.center.slick-initialized{
-        max-width: 1440px !important;
+        max-width: 1280px !important;
     }
     
     .all-services >.slick-slider.center.slick-initialized> .slick-list {
-        max-width: 1440px !important;
+        max-width: 1280px !important;
     }
 
     .all-services >.slick-slider.center.slick-initialized> .slick-list > .slick-track{

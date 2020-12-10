@@ -25,13 +25,27 @@
 }
 
 #contentAboutUs .title h1 {
-    font-size: 3rem;
+    font-size: 4.4rem;
 }
 
 @media (min-width: 1024px) {
-    #contentAboutUs .title {
-        border-bottom: 0.25rem solid #000000;
+    #contentAboutUs #First {
+        flex-direction: row;
     }
+
+    #Second {
+        display: none !important;
+    }
+
+    #contentAboutUs .title:after {
+        content: "";
+        position: absolute;
+        height: 4rem;
+        width: 12.8rem;
+        padding-bottom: 1rem;
+        border-bottom: 0.3rem solid black;
+    }
+
     #contentAboutUs #Second h1 {
         display: none;
     }
