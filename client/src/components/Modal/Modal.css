@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    overflow: auto;
 }
 
 .modalOpened .informationsModal{
@@ -38,6 +39,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .modalOpened .buttonModal{
@@ -70,6 +72,8 @@
 
 .modalOpened .modalText {
     height: 60%;
+    overflow: visible;
+    margin-bottom: 2rem;
 }
 .modalOpened .imagesModal {
     width: 100%;
@@ -107,7 +111,6 @@
 .modalOpened .descModal{
     width: auto;
     height: calc(90% - 70px);
-    overflow-y: auto;
     font-size: 14px;
     text-align: justify;
     padding: 0 1rem;
@@ -115,9 +118,7 @@
     margin:0 2rem;
     margin-bottom: 2rem;
     font-size:3.2vw !important;
-    line-height: 1.5rem;
-    overflow: auto;
-    text-overflow: scroll;
+    line-height: 2rem;
 }
 
 
@@ -130,18 +131,6 @@
     }
 }
 
-@media (min-height: 768px){
-    .modalOpened .backgroundModal{
-        width: 60%;
-    }
-    .modalOpened .imagesModal{
-        height: 40%;
-    }
-    .modalOpened .descModal{
-        line-height: normal;
-    }
-}
-
 @media (min-width: 769px){
     .modalOpened .imageModal {
         height: 80%;
@@ -150,8 +139,9 @@
         font-size: 18px !important;
     }
     .modalOpened .descModal{
-        font-size: 15px;
+        font-size: 15px !important;
         padding: 0 3rem;
+        line-height: normal;
     }
 }
 
