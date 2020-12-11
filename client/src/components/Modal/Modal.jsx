@@ -1,27 +1,30 @@
-import React, { useState } from "react";
-import "./Modal.css"
+import { React } from 'react';
+import "./Modal.css";
 
-function Modal({image, title, desc, modalVisible, func}) {
+function Modal({image, title, desc, modalServiceVisible, func}){
+
     return(
-        <>
-            <div className={modalVisible ? "modalOpened" : "modalClosed"} id="modal">
-                <div className="backgroundModal">
-                <button className="buttonModal" onClick={func}>
-                    Close
-                </button>
-                <div className="imgModal">
-                    <img src={image} alt={title}/>
-                </div>
-                <div className="titleModal">
-                    <h2>{title}</h2>
-                </div>
-                <div className="descModal">
-                    <p>{desc}</p>
-                </div>
+        <div className = {modalServiceVisible? "modalOpened":"modalClosed"}>
+            <div className = "backgroundModal">
+                <button className = "buttonModal" onClick = {() => func()}></button>
+                <div className = "informationsModal">
+                    <div className="imagesModal">
+                    <div className="imageModal">
+                        <img src = {image}/>
+                    </div>
+                    </div>
+                    <div className="modalText">
+                    <div className="titleModal">
+                        <h1>{title}</h1>
+                    </div>
+                    <div className="descModal">
+                        <p>{desc}</p>
+                    </div>
+                    </div>
                 </div>
             </div>
-        </>
-    );
+        </div>
+    )
 }
 
 export default Modal;

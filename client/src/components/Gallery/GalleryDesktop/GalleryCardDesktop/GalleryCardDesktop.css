@@ -50,7 +50,7 @@ button {
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
     .mission h3 {
         font-size: 6rem;
     }

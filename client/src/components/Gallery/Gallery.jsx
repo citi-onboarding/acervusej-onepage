@@ -15,7 +15,6 @@ function Gallery() {
 
   return (
     <div className="gallery" id="gallery">
-      <DesktopModal/>
       <div className="container">
         <div className="content">
           <div className="gallery-section-title">
