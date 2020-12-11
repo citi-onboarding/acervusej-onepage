@@ -6,7 +6,10 @@ function Modal({image, title, desc, modalVisible, func}){
     return(
         <div className = {modalVisible? "modalOpened":"modalClosed"}>
             <div className = "backgroundModal">
-                <button className = "buttonModal" onClick = {() => func()}></button>
+                <button className = "buttonArea" onClick = {() => func()}>
+                    <button className = "buttonModal"></button>
+                </button>
+                
                 <div className = "informationsModal">
                     <div className="imagesModal">
                     <div className="imageModal">
