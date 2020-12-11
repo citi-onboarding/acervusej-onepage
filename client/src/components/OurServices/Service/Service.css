@@ -37,9 +37,13 @@
     font-size:3.2vw;
     text-align: justify;
     width:100%;
-    overflow-y: auto;
-    max-height: 30vw;
+    max-height: 33vw;
     min-height: 18vw;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .image-service{
@@ -64,7 +68,7 @@
     }
     .desc-service{
         font-size: 2.7vw;
-        max-height: 25vw;
+        max-height: 27vw;
         min-height: 20.5vw;
     }
 }
@@ -100,6 +104,7 @@
         width:70%;
         min-height: 10px;
         max-height: 60px !important;
+        -webkit-line-clamp: 3;
     }
 }
 
