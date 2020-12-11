@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Slider from "react-slick";
 import GalleryCardDesktop from "./GalleryCardDesktop/GalleryCardDesktop"
-import Modal from "./Modal"
+import Modal from '../../Modal/Modal';
+
 import rightArrow from "../../../assets/right_arrow.svg";
 import leftArrow from "../../../assets/left_arrow.svg";
 
@@ -38,7 +39,7 @@ function GalleryDesktop() {
     loadGalleryDesktop();
   }, []);
 
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalGalleryVisible, setModalGalleryVisible] = useState(false);
   const [imgSrc, setImgSrc] = useState("");
   const [titleSrc, setTitleSrc] = useState("");
   const [descSrc, setDescSrc] = useState("");
@@ -48,20 +49,19 @@ function GalleryDesktop() {
     setImgSrc(img);
     setTitleSrc(title);
     setDescSrc(desc);
-    setModalVisible(!modalVisible);
+    setModalGalleryVisible(!modalGalleryVisible);
     const body = document.querySelector('body');
     body.style.overflow = 'hidden'
   }
 
   const closeModal = () =>{
-    setModalVisible(false)
+    setModalGalleryVisible(false)
     const body = document.querySelector('body');
     body.style.overflow = 'visible'
   }
 
   return (
     <div className="galleryDesktop">
-        <Modal image={imgSrc} title={titleSrc} desc={descSrc} modalVisible={modalVisible} func={closeModal} />
       <img src={leftArrow} alt="" className="arrow" id="leftArrow" />
       <Slider {...settings}>
         {galleryDesktop.posts.map((post) => (
@@ -71,21 +71,9 @@ function GalleryDesktop() {
         ))}
       </Slider>
       <img src={rightArrow} alt="" className="arrow" id="rightArrow" />
+      <Modal image={imgSrc} title={titleSrc} desc={descSrc} modalVisible={modalGalleryVisible} func={closeModal} />
     </div>
   );
 }
-
-
-{/* <div className="all-services">
-      <Modal image = {imgSrc} title = {titleSrc} desc ={descSrc} modalServiceVisible ={modalVisible} func={closeModal}/>
-      <h1 className = "title-our-services">Nossos Serviços</h1>
-      <Slider {...settings}>
-        {services?.map(({ _id, image ,title, description}) =>(
-          <div key={_id} className="service-card" onClick= {() => openModal(image[0].secure_url, title, description)}>
-            <Service  image = {image[0].secure_url} title= {title} desc = {description}/>
-          </div>
-        ))}
-      </Slider>
-    </div> */}
 
 export default GalleryDesktop;

@@ -1,7 +1,6 @@
 import {useState, useEffect } from "react";
 import GalleryMobile from "./GalleryMobile/GalleryMobile";
 import GalleryDesktop from "./GalleryDesktop/GalleryDesktop";
-import DesktopModal from "./DesktopModal"
 
 import "./Gallery.css";
 

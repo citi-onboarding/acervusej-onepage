@@ -1,10 +1,10 @@
 import { React } from 'react';
 import "./Modal.css";
 
-function Modal({image, title, desc, modalServiceVisible, func}){
+function Modal({image, title, desc, modalVisible, func}){
 
     return(
-        <div className = {modalServiceVisible? "modalOpened":"modalClosed"}>
+        <div className = {modalVisible? "modalOpened":"modalClosed"}>
             <div className = "backgroundModal">
                 <button className = "buttonModal" onClick = {() => func()}></button>
                 <div className = "informationsModal">
