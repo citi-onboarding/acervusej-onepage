@@ -23,12 +23,11 @@
 .modalOpened .backgroundModal{
     position: relative;
     width: 80%;
-    height: 70%;
+    height: 80%;
     background-color: var( --color-background);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    border-radius: 5px;
 }
 
 .modalOpened .informationsModal{
@@ -70,10 +69,11 @@
 }
 
 .modalOpened .modalText {
-    height: 50%;
+    height: 60%;
 }
 .modalOpened .imagesModal {
-    height: 50%;
+    width: 100%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +81,7 @@
 }
 
 .modalOpened .imageModal{
-    width: 70%;
+    width: 60%;
     height: 70%;
     margin: 2rem;
     display: flex;
@@ -91,7 +91,6 @@
 }
 
 .modalOpened .imageModal img{
-    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -102,18 +101,25 @@
     height: auto;
     margin-bottom: 2rem;
     font-size: 3.8vw;
+    height: auto;
 }
 
 .modalOpened .descModal{
     width: auto;
-    height: 15rem;
+    height: calc(90% - 70px);
     overflow-y: auto;
     font-size: 14px;
     text-align: justify;
     padding: 0 1rem;
+    padding-bottom: 2rem;
     margin:0 2rem;
+    margin-bottom: 2rem;
     font-size:3.2vw !important;
+    line-height: 1.5rem;
+    overflow: auto;
+    text-overflow: scroll;
 }
+
 
 @media (min-width:500px){
     .modalOpened .titleModal h1{
@@ -126,16 +132,19 @@
 
 @media (min-height: 768px){
     .modalOpened .backgroundModal{
-        max-height: 540px !important;
+        width: 60%;
     }
     .modalOpened .imagesModal{
-        height: 60%;
+        height: 40%;
+    }
+    .modalOpened .descModal{
+        line-height: normal;
     }
 }
 
 @media (min-width: 769px){
     .modalOpened .imageModal {
-        max-height: 300px;
+        height: 80%;
     }
     .modalOpened .titleModal h1{
         font-size: 18px !important;
@@ -147,8 +156,21 @@
 }
 
 @media (min-width: 1024px){
+    .modalOpened .backgroundModal{
+        width: 60%;
+        max-width: 700px;
+    }
+    .modalOpened .imagesModal{
+        height: 50%;
+        margin-top: 3%;
+    }
+    .modalOpened .imageModal {
+        height: 85%;
+        max-width: 370px;
+    }
     .modalOpened .descModal{
         font-size: 15.5px !important;
+        line-height: 2rem;
     }
     .modalOpened .titleModal{
         font-size: 18px !important;
@@ -156,9 +178,6 @@
 }
 
 @media(min-width: 1440px) {
-    .modalOpened .backgroundModal {
-        width: 1152px;
-    }
     .modalOpened .titleModal{
         font-size: 30px;
     }
