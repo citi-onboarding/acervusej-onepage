@@ -4,6 +4,7 @@ import Service from './Service/Service';
 import Slider from 'react-slick';
 import Modal from '../Modal/Modal';
 
+
 import './OurServices.css';
 
 function OurServices() {
@@ -59,7 +60,7 @@ function OurServices() {
           </div>
         ))}
       </Slider>
-     <Modal image = {imgSrc} title = {titleSrc} desc ={descSrc} modalServiceVisible ={modalServiceVisible} func={closeModal}/>
+     <Modal image = {imgSrc} title = {titleSrc} desc ={descSrc} modalVisible ={modalServiceVisible} func={closeModal}/>
     </div>
   );
 }

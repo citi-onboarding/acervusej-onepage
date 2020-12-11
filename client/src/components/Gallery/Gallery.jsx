@@ -12,7 +12,6 @@ function Gallery() {
     window.addEventListener('resize', () => setWidth(window.innerWidth));
   }, [])
 
-
   return (
     <div className="gallery" id="gallery">
       <div className="container">
