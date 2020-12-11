@@ -111,14 +111,11 @@
 .modalOpened .descModal{
     width: auto;
     height: calc(90% - 70px);
-    font-size: 14px;
     text-align: justify;
     padding: 0 1rem;
     padding-bottom: 2rem;
     margin:0 2rem;
     margin-bottom: 2rem;
-    font-size:3.2vw !important;
-    line-height: 2rem;
 }
 
 
