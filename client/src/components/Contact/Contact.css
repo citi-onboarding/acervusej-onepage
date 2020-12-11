@@ -218,7 +218,10 @@
         align-self: flex-end;
         padding: 0.3rem 0.5rem;
         margin-top: 1rem;
-
     }
+}
+
+@media(min-width:1280px){
+    
 }
 

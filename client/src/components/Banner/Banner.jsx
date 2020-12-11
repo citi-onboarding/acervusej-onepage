@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../services/api';
 import Slider from "react-slick";
 import './Banner.css';
 
@@ -20,7 +20,7 @@ function Banner() {
   const [banners, setBanners] = useState([]);
 
   const loadBanners = async () => {
-    const res = await axios.get('http://localhost:3001/api/banners');
+    const res = await api.get('banners');
     setBanners(res.data);
   };
 

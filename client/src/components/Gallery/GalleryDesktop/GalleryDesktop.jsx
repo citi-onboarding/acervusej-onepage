@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from '../../../services/api';
 import Slider from "react-slick";
 import GalleryCardDesktop from "../GalleryDesktop/GalleryCardDesktop/GalleryCardDesktop";
 
@@ -28,7 +28,7 @@ function GalleryDesktop() {
     });
 
     const loadGalleryDesktop = async () => {
-        const res = await axios.get("http://localhost:3001/api/gallery");
+        const res = await api.get("gallery");
         setGalleryDesktop({
             posts: res.data,
         });

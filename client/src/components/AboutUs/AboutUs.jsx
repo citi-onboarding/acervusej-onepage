@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../services/api';
 import './AboutUs.css'
 
 import AboutUsPostCompany from './AboutUsPost/AboutUsPostCompany';
@@ -16,11 +16,11 @@ function AboutUs() {
     });
 
     const loadAboutUs = async () => {
-        const res = await axios.get('http://localhost:3001/api/about-us');
+        const res = await api.get('about-us');
         setAboutUs({
             aboutCompany: {
                 label: res.data[0].key,
-                description: res.data[0].aboutCompany.description,
+                descripton: res.data[0].aboutCompany.description,
                 image: { secure_url: res.data[0].aboutCompany.image.secure_url },
             },
             aboutCourse: {

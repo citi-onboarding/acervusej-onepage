@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from '../../../services/api';
 import Slider from "react-slick";
 import GalleryCardMobile from "./GalleryCardMobile/GalleryCardMobile";
 
@@ -26,7 +26,7 @@ function GalleryMobile() {
   });
 
   const loadGalleryMobile = async () => {
-    const res = await axios.get("http://localhost:3001/api/gallery");
+    const res = await api.get("gallery");
     setGalleryMobile({
       posts: res.data,
     });
