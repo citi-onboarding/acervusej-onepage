@@ -184,11 +184,12 @@
     }
 
     .inputs-contact> div> p {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         padding:0 0 2px 0;
     }
 
     .inputs-contact> div>input{
+        padding: 0.4rem;
         height: 22px;
         width: 390px;
         font-size: 16px;
@@ -223,7 +224,10 @@
         align-self: flex-end;
         padding: 0.3rem 0.5rem;
         margin-top: 1rem;
-
     }
+}
+
+@media(min-width:1280px){
+    
 }
 

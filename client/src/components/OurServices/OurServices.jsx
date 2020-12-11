@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../services/api';
 import Service from './Service/Service';
 import Slider from 'react-slick';
 import Modal from '../Modal/Modal';
@@ -12,7 +12,7 @@ function OurServices() {
   const [services, setServices] = useState([]);
 
   const loadServices= async () => {
-    const res = await axios.get('http://localhost:3001/api/services');
+    const res = await api.get('services');
     setServices(res.data);
   };
 

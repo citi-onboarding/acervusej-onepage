@@ -1,7 +1,7 @@
 import { useState, useEffect, useReducer } from 'react';
 import './Contact.css';
 import logo from '../../assets/Logo-contact.png'
-import axios from 'axios';
+import api from '../../services/api';
 
 
 const initialState = {
@@ -34,7 +34,7 @@ function Contact (){
 
 
     const loadReasons = async () => {
-    const res = await axios.get('http://localhost:3001/api/contact-reasons');
+    const res = await api.get('contact-reasons');
         getReason(res.data);
     };
 
@@ -48,9 +48,7 @@ function Contact (){
             try {
             state.subject = state.name
             setSendMessage('Enviando...')
-            await axios.post('http://localhost:3001/api/send-email', state);
-            
-            console.log('Email enviado com sucesso!');
+            await api.post('send-email', state);
             } catch (err) {
                 alert('Email não enviado')
             }

@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 9vw;
-    font-size: 4.4rem;
+    font-size: 3.2rem;
 }
 
 .all-services > .slick-slider.center.slick-initialized{
@@ -98,8 +98,8 @@
     .title-our-services:after {
         content: "";
         position: absolute;
-        height  : 4rem;
-        width   : 12.8rem; 
+        height  : 3.2rem;
+        width   : 10rem; 
         padding-bottom: 1rem;
         border-bottom: 0.3rem solid black;
     }

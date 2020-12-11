@@ -1,7 +1,9 @@
 const keystone = require('keystone');
 const Types = keystone.Field.Types;
 
-const User = new keystone.List('User');
+const User = new keystone.List('User', {
+  label: 'Usuários'
+});
 
 User.add({
   name: {
