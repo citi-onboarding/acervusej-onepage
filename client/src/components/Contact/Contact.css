@@ -1,0 +1,233 @@
+.contact-box{
+    width:100%;
+    height: 520px;
+    background-color: var(--color-contact-background);
+    display: flex;
+    align-items: center;
+}
+
+.contact-box >.container{
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-logo{
+    display: none;
+}
+
+.right-contact{
+    height:490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.information-contact{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 2.9rem;
+}
+
+.contact-desc{
+    margin-bottom: 4rem;
+    width: 27rem;
+}
+
+.inputs-contact{
+    height:370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.inputs-contact> div>input{
+    font-size: 13px;
+    margin: 0.5rem 0;
+    height: 19px;
+    width: 254px;
+    padding: 2px;
+    background-color: var(--color-background);
+    border: none;
+}
+
+.inputs-contact>div> input:focus{
+    outline: none;
+}
+
+#input-number-contact{
+    width: 86px;
+    font-size: 10px;
+    margin-bottom: 2.9rem;
+}
+
+#reasons-box{
+    margin: 0.5rem 0;
+    border: none;
+    background-color: var(--color-background);
+    height: 19px;
+    width: 154px;
+    font-family: TwCenMT;
+}
+
+#reasons-box:focus{
+    outline: none;
+}
+
+#input-message-contact{
+    margin: 0.5rem 0;
+    height: 116px;
+    resize: none;
+    width: 253px;
+    border: none;
+    padding: 2px;
+    font-size: 13px;
+}
+
+#input-message-contact:focus{
+    outline: none;
+}
+
+.button-contact{
+    padding: 0.9rem 0;
+    cursor: pointer;
+    width: 62px;
+    height: 32px;
+    background-color: var(--color-background);
+    border: 2px solid var(--color-footer);
+    font-family: TwCenMTBold;
+    font-size: 1.2rem;
+}
+
+.button-contact:focus{
+    outline: none;
+}
+
+.button-contact:hover{
+    background-color:rgba(226, 222, 222, 0.938) ;
+}
+
+
+@media (min-width:769px){
+    .contact-box{
+        height: 500px;
+    }
+    
+    .contact-box >.container{
+        height: 500px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .contact-logo{
+        display: flex;
+        height: 65px;
+        margin-top: 100px;
+    }
+    
+    .right-contact{
+        height:470px;
+    }
+    
+    .information-contact{
+        height: 70px;
+        width: 254px;
+    }
+    
+    .contact-desc{
+        font-size: 1.5rem;
+    }
+    
+    .inputs-contact {
+        height: 310px;
+    }
+    .inputs-contact >div>p{
+        font-size: 1.5rem;
+    }
+
+    .button-contact{
+        align-self: flex-end;
+        width: 67px;
+    }
+
+    .button-contact{
+        align-self: flex-end;
+        width: 67px;
+    }
+}
+
+@media (min-width:1025px){
+    .contact-box{
+        height: 650px;
+    }
+    .contact-box >.container{
+        height: 550px;
+    }
+   
+    .contact-logo{
+        height: 70px;
+        margin-top:120px;
+    }
+     
+    .right-contact{
+        height:100%;
+    }
+
+    .inputs-contact{
+        height:470px;
+        width: 390px;
+    }
+
+    .inputs-contact> div> p {
+        font-size: 1.6rem;
+        padding:0 0 2px 0;
+    }
+
+    .inputs-contact> div>input{
+        padding: 0.4rem;
+        height: 22px;
+        width: 390px;
+        font-size: 16px;
+    }
+    
+    #input-number-contact{
+        width: 150px;
+        margin-bottom: 2rem;
+        font-size: 14px;
+    }
+    
+    #reasons-box{
+        height: 22px;
+        width: 230px;
+        font-size: 15px;
+    }
+    
+    #reasons-box > option{
+        font-size: 15px;
+    }
+    
+    #input-message-contact{
+        width: 390px !important;
+        padding: 4px;
+        font-size: 15px;
+    }
+    
+    .button-contact{
+        width: 85px;
+        height: 36px;
+        font-size: 1.6rem;
+        align-self: flex-end;
+        padding: 0.3rem 0.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media(min-width:1280px){
+    
+}
+

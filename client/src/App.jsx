@@ -1,10 +1,24 @@
 import {
-  PostList,
-} from './components';
+  Header,
+  Banner,
+  AboutUs,
+  OurServices,
+  Gallery,
+  Footer,
+  Contact,
+} from './components/index';
 
 function App() {
   return (
-    <PostList />
+    <>
+      <Header />
+      <Banner />
+      <AboutUs />
+      <OurServices/>
+      <Gallery />
+      <Contact/>
+      <Footer />
+    </>
   );
 }
 

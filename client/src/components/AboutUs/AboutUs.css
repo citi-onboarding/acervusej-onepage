@@ -1,0 +1,52 @@
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentAboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentAboutUs .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+#contentAboutUs #First {
+    margin-top: 10rem;
+}
+
+#contentAboutUs .title h1 {
+    font-size: 3.2rem;
+}
+
+@media (min-width: 1024px) {
+    #contentAboutUs #First {
+        flex-direction: row;
+    }
+
+    #Second {
+        display: none !important;
+    }
+
+    #contentAboutUs .title:after {
+        content: "";
+        position: absolute;
+        height: 3.2rem;
+        width: 10rem;
+        padding-bottom: 1rem;
+        border-bottom: 0.3rem solid black;
+    }
+
+    #contentAboutUs #Second h1 {
+        display: none;
+    }
+}
