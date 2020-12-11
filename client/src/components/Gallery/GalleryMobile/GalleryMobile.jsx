@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Slider from "react-slick";
 import GalleryCardMobile from "./GalleryCardMobile/GalleryCardMobile";
+import Modal from '../../Modal/Modal';
 
 import rightArrow from '../../../assets/right_arrow.svg';
 import leftArrow from '../../../assets/left_arrow.svg';
@@ -36,17 +37,40 @@ function GalleryMobile() {
     loadGalleryMobile();
   }, []);
 
+  const [modalGalleryVisible, setModalGalleryVisible] = useState(false);
+  const [imgSrc, setImgSrc] = useState("");
+  const [titleSrc, setTitleSrc] = useState("");
+  const [descSrc, setDescSrc] = useState("");
+
+  const openModal = async (img, title, desc) =>{
+    setImgSrc(img);
+    setTitleSrc(title);
+    setDescSrc(desc);
+    setModalGalleryVisible(!modalGalleryVisible);
+    const body = document.querySelector('body');
+    body.style.overflow = 'hidden'
+    settings.autoplay = false;
+  }
+
+  const closeModal = () =>{
+    setModalGalleryVisible(false)
+    const body = document.querySelector('body');
+    body.style.overflow = 'visible'
+    settings.autoplay = true;
+  }
+
   return (
     <div className='galleryMobile'>
       <img src={leftArrow} alt="" className="arrowLeft"/>
       <Slider {...settings}>
         {galleryMobile.posts.map((post) => (
-          <div>
+          <div key={post._id} className="cardDesktop" onClick={() => openModal(post?.image?.secure_url, post?.title, post?.description)}>
             <GalleryCardMobile post={post} />
           </div>
         ))}
       </Slider>
       <img src={rightArrow} alt="" className="arrowRight"/>
+      <Modal image={imgSrc} title={titleSrc} desc={descSrc} modalVisible={modalGalleryVisible} func={closeModal} />
     </div>
   );
 }

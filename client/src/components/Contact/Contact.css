@@ -154,6 +154,11 @@
         align-self: flex-end;
         width: 67px;
     }
+
+    .button-contact{
+        align-self: flex-end;
+        width: 67px;
+    }
 }
 
 @media (min-width:1025px){
