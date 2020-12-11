@@ -49,8 +49,6 @@ function Contact (){
             state.subject = state.name
             setSendMessage('Enviando...')
             await axios.post('http://localhost:3001/api/send-email', state);
-            
-            console.log('Email enviado com sucesso!');
             } catch (err) {
                 alert('Email não enviado')
             }
