@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import api from '../../services/api';
 import './AboutUs.css'
@@ -20,7 +21,7 @@ function AboutUs() {
         setAboutUs({
             aboutCompany: {
                 label: res.data[0].key,
-                descripton: res.data[0].aboutCompany.description,
+                description: res.data[0].aboutCompany.description,
                 image: { secure_url: res.data[0].aboutCompany.image.secure_url },
             },
             aboutCourse: {
