@@ -7,7 +7,7 @@ function GalleryCardDesktop({ post }) {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
-      <button onClick={() => setIsModalVisible(true)} id="galleryButton">
+      <button onClick={() => setIsModalVisible(true)}>
         {isModalVisible ? <DesktopModal post={post} /> : null }
         <div className='cardDesktop' key={post?._id}>
           <div className="gallery-image">
