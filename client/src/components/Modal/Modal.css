@@ -42,7 +42,6 @@
 }
 
 .modalOpened .buttonArea{
-    background: transparent;
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -51,6 +50,7 @@
     margin-right: 10px;
     outline: none;
     border: none;
+    background: transparent;
 }
 
 .modalOpened .buttonModal{
